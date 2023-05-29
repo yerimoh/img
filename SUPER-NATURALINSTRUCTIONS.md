@@ -2,36 +2,29 @@
 
 
 # Abstract
- How well can NLP models generalize to a va
-riety of unseen tasks when provided with task
- instructions? To address this question, we first
- introduce SUPER-NATURALINSTRUCTIONS,1
- a benchmark of 1,616 diverse NLP tasks and
- their expert-written instructions. Our collec
-tion covers 76 distinct task types, including but
- not limited to classification, extraction, infill
+**목적:**    
+NLP 모델을 instructions과 함께 제공될 때 **_다양한_ unseen tasks**으로 일반화          
+
+**방법:** 
+* 1,616개의 다양한 NLP 작업과 전문가가 작성한 지침의 벤치마크인 SUPER-NATURALINSTRUCTIONS을 소개.      
+우리의 컬렉션은  classification, extraction, infill
 ing, sequence tagging, text rewriting, and text
- composition. This large and diverse collec
-tion of tasks enables rigorous benchmarking of
- cross-task generalization under instructions—
- training models to follow instructions on a sub
-set of tasks and evaluating them on the remain
-ing unseen ones.
- Furthermore, we build Tk-INSTRUCT, a trans
-former model trained to follow a variety of in
-context instructions (plain language task defi
-nitions or k-shot examples). Our experiments
- show that Tk-INSTRUCT outperforms existing
- instruction-following models such as Instruct
-GPTbyover9%onourbenchmark despite be
-ing an order of magnitude smaller. We further
- analyze generalization as a function of various
- scaling parameters, such as the number of ob
-served tasks, the number of instances per task,
- and model sizes. We hope our dataset and
- model facilitate future progress towards more
- general-purpose NLP models.2
+ composition.을 포함하지만 이에 국한되지 않는 76개의 개별 task 유형을 다룸.      
+* 이렇게 크고 다양한 task 모음을 통해 instructions과에 따라 cross-task generalization를 엄격하게 벤치마킹할 수 있음    
+ 즉, 모델이  subset of tasks에 대한 instructions을 따르도록 training하고, 나머지 unseen task에 대한 지침을 평가함      
+* Tk-INSTRUCT build    
+다양한 incontext instructions(일반 언어 작업 정의 또는 k-shot 예제)을 따르도록 train된  transformer      
+
+**결과:**     
+* 우리의 실험에 따르면 **Tk-INSTRUCT는 크기가 다소 작음에도 불구**하고,   
+ Instruct GPT와 같은 기존 instruction-following 모델을 **벤치마크에서 9% 이상 능가**     
  
+우리는 관찰된 작업 수, 작업당 인스턴스 수, 모델 크기와 같은 다양한 스케일링 매개 변수의 함수로서 일반화를 추가로 분석.   
+우리는 우리의 데이터 세트와 모델이 더 범용적인 NLP 모델을 향한 미래의 발전을 촉진하기를 바란다.       
+
+
+---
+---
  
  
  # 1 Introduction
