@@ -37,45 +37,181 @@ ing, sequence tagging, text rewriting, and text
 
 
 **[본 논문의 해결]**         
-* **해결 1)** 본 논문은, instructions과 함께 다양한 NLP 작업으로 구성된 **meta-dataset(SUP-NATINST)를 구성**             
-* **해결 2)** instructions이 주어진 new task을 수행할 수 있는 모델을 train하여 **Instruct GPT(16배 더 많은 매개변수를 사용)를 능가**함.                
+* **해결 1)** 본 논문은, instructions과 함께 다양한 NLP 작업으로 구성된 <span style="background-color:#FFE6E6">**meta-dataset(SUP-NATINST)를 구성**</span>            
+* **해결 2)** instructions이 주어진 <span style="background-color:#FFE6E6">new task을 수행할 수 있는 **모델(Tk-INSTRUCT)**</span>을 train하여 **Instruct GPT(16배 더 많은 매개변수를 사용)를 능가**함.                
 
-**[해결 1) dataset: SUPER-NATURALINSTRUCTIONS (SUP-NATINST for short)]**
+**[해결 1) dataset: SUPER-NATURALINSTRUCTIONS (SUP-NATINST for short)]**       
 * 우리의 데이터 세트인 SUP-NATINST는 1,616개의 NLP 작업과 해당 자연어 명령의 대규모 벤치마크임.     
 * 55개 언어에 걸친 76개의 광범위한 작업 유형과 같은 다양한 task를 제공        
-* 각 task는 **입력 텍스트를 task 출력에 매핑하기 위한 task 정의**와 원하는 또는 **원하지 않는 출력을 보여주기 위한 몇 가지 예제로 구성된 명령**과 쌍을 이룸 (Figure 1)     
-* Figure 1: An example task from SUP-NATINST   
-<img width="217" alt="image" src="https://github.com/yerimoh/img/assets/76824611/4cd3f109-f796-4981-be06-46b0cef76081">
+* 각 task는 **입력 텍스트를 task 출력에 매핑하기 위한 task 정의**와 원하는 또는 **원하지 않는 출력을 보여주기 위한 몇 가지 예제로 구성된 명령**과 쌍을 이룸 (Figure 1)       
 * 이러한 task와 instructions 88명의 NLP 실무자가 공개 요청에 따라 제공합니다.     
 이러한 기여는 품질을 보장하기 위해 여러 차례의 동료 검토 및 크라우드소싱 피드백을 거친 후 통합됨.      
 * 이렇게 다양하고 대규모의 데이터를 보유하면 task를 훈련 및 테스트 세트로 신중하게 나누고 최첨단 방법이 이들에게 어떻게 수행되는지 체계적으로 연구 가능      
-* 표 1과 그림 2는 관련 벤치마크와 비교하여 SUP-NATINST의 속성을 강조하며 벤치마크의 작업 및 교육 유형의 다양성을 강조합니다.
+* Table 1과 그림 2는 관련 벤치마크와 비교하여 SUP-NATINST의 속성을 강조하며 벤치마크의 작업 및 교육 유형의 다양성을 강조합니다.    
 
 
+**Figure 1: An example task from SUP-NATINST**     
+<img width="217" alt="image" src="https://github.com/yerimoh/img/assets/76824611/4cd3f109-f796-4981-be06-46b0cef76081">
+
+**Table 1: SUP-NATINST를 field에서 주목할 만한 몇 가지 데이터셋과 비교**.             
 <img width="416" alt="image" src="https://github.com/yerimoh/img/assets/76824611/9f885db3-a4a5-41cd-b3b9-91975f09081c">
-Table 1: A comparison of SUP-NATINST to a few notable datasets in the field. We obtain the number of tasks,
-instructions, and task types of other datasets from their original paper. “–” indicates the fields are not applicable or
-unknown. Standards for categorizing task types vary across different datasets (see Fig. 2). *PROMPTSOURCE does
-not provide task type annotation for all their tasks, for which we report only the 13 task types annotated for training
-T0 (Sanh et al., 2022) instead.
+* 우리는 원본 논문에서 다른 데이터 세트의 작업 수, instructions 및 task types을 얻음     
+*  "–" 는 적용할 수 없거나 알 수 없음을 나타냅니다.     
+*  task type을 분류하는 표준은 데이터 세트마다 다름(Figure 2 참조)      
+*  PROMPTSOURCE는 모든 task에 대한 task type 주석을 제공하지 않으며, 대신 T0 교육을 위해 주석이 달린 13개의 task type만 보고함 
+
+**Figure 2: Compared to other datasets**        
 <img width="427" alt="image" src="https://github.com/yerimoh/img/assets/76824611/22d563d8-e4c7-43ff-b88e-4d94542ad7c8">
-Figure 2: Compared to other datasets, SUP-NATINST covers a more diverse range of task types. InstructGPT reports
-a very coarse categorization of their task types. Bubble size represents the number of tasks of each type in log scale.
-
-Our model, Tk-INSTRUCT, is a generative model for transforming task inputs given declarative in-context instructions (task definition or kshot examples). It is built by multi-task training of the T5 model (Raffel et al., 2020) over all the task instructions in our training set, and is eval uated on unseen tasks in the test set. Interestingly, an 11B-parameter Tk-INSTRUCT can outperform the 175B-parameter InstructGPT model by 9.9 ROUGE-L points when evaluated on 119 unseen English tasks, and the multilingual variant mTk-INSTRUCT outperforms InstructGPT by 13.3 points on 35 non-English tasks (§6.1). According to human evaluation, Tk-INSTRUCT generates responses at least as well as the ground truth for 77% of the testing instances (§6.2), confirming its strong generalization to unseen tasks.
-
-우리의 모델인 Tk-INSTRUCT는 선언적 인 컨텍스트 지침(작업 정의 또는 kshot 예제)이 주어진 작업 입력을 변환하기 위한 생성 모델입니다. T5 모델(Raffel et al., 2020)의 다중 작업 훈련에 의해 훈련 세트의 모든 작업 지침에 걸쳐 구축되며, 테스트 세트에서 보이지 않는 작업에 대해 평가됩니다. 흥미롭게도, 11B 매개 변수 Tk-INSTRUCT는 119개의 보이지 않는 영어 작업에서 평가될 때 175B 매개 변수 InstructGPT 모델을 9.9ROUGE-L 포인트만큼 능가할 수 있으며, 다국어 변형 mTk-INSTRUCT는 35개의 영어가 아닌 작업(6.1)에서 13.3 포인트만큼 InstruitruituteGPT를 능가합니다. 인간의 평가에 따르면, Tk-INSTRUCT는 테스트 인스턴스의 77%(§6.2)에 대한 응답과 함께 최소한의 응답을 생성하여 보이지 않는 작업에 대한 강력한 일반화를 확인합니다.
-
-TkINSTRUCT의 강력한 경험적 성능은 일반화 가능한 NLP 모델에 대한 연구를 용이하게 하기 위해 SUP-NATINST와 같은 초대형 메타 데이터 세트의 중요성을 확인합니다. 우리는 이 일반화의 중요한 요소를 이해하기 위해 광범위한 분석을 수행합니다(§7). 우리의 분석은 훈련 작업의 다양성과 모델 크기를 확장하는 것이 보이지 않는 작업에 대한 강력한 일반화에 모두 중요하다는 것을 보여줍니다. 마지막으로 성능 상한을 추정하여 추가 개선의 여지를 제시합니다.
-
-The compelling empirical performance of TkINSTRUCT confirms the importance of super-sized meta datasets such as our SUP-NATINST to facilitate research towards generalizable NLP models. We conduct extensive analysis to understand the important factors for this generalization (§7). Our analysis shows that scaling up the diversity of training tasks and the model size are both important for strong generalization to unseen tasks. Finally, we estimate performance upper bounds, suggesting further room for improvement.
+* 다른 데이터셋에 비해 SUP-NATINST는 더 다양한 task types을 지원함      
+* InstructGPT의 task types의 매우 거친(coarse) 분류를 하는 걸로 보임    
+* 버블 크기는 log scale에서 각 유형의 태스크 수를 나타냄        
 
 
 
+**[해결 2) model: Tk-INSTRUCT]**
+* 우리의 모델인 Tk-INSTRUCT는 in-context instructions (task definition 또는 _k-shot_ 예제)이 주어진 task input을 변환하기 위한 generative 모델임.      
+* T5 모델(Raffel et al., 2020)의 multi-task training에 의해 training 세트의 모든 작업 지침에 걸쳐 구축되며,    
+test set에서 unseen task에 대해 평가됨       
+* 흥미롭게도, 11B 매개 변수 Tk-INSTRUCT는 119개의 unseen English tasks에서 평가될 때,     
+**175B-parameter InstructGPT 모델을 9.9 ROUGE-L points만큼 능가**할 수 있으며,         
+multilingual variant mTk-INSTRUCT는 35개의 영어가 아닌 작업에서 **13.3 points만큼 InstructGPT를 능가**함      
+* human evaluation에 따르면, Tk-INSTRUCT는 testing instances의 77%(§6.2)에 대한 실제와 맞는 생성하여 **unseen tasks에 대한 강력한 일반화**를 확인한다.        
 
 
+
+**[understand the important factors for this generalization]**        
+* TkINSTRUCT의 강력한 empirical 성능은 generalizable NLP 모델에 대한 연구를 용이하게 하기 위해 **SUP-NATINST와 같은 초대형 메타 데이터 세트의 중요성을 확인**함      
+* 우리는 이 generalization의 중요한 요소를 이해하기 위해 광범위한 분석을 수행함(§7)      
+* 우리의 분석은 <span style="background-color:#fff5b1">**training task의 다양성**과 **model size를 확장**하는 것이 **unseen tasks에 대한 강력한 generalization에 중요**</span>하다는 것을 보여줌     
+* 마지막으로 성능 상한을 추정하여 추가 개선의 여지를 제시함      
+
+
+------
+-----
+
+# 2 SUPER-NATURALINSTRUCTIONS
+SUPER-NATURALINSTRUCTIONS is a metadataset (Triantafillou et al., 2019) consisting of a
+variety of NLP tasks (see Fig. 2a) and instructions
+that describe them in plain language.
+Instruction schema. All task instructions follow
+the same uniform schema (see Fig. 1) which is
+composed of the following parts:
+• DEFINITION defines a given task in natural language. This is a complete definition of how an
+input text (e.g., a sentence or a document) is expected to be mapped to an output text.
+
+• POSITIVE EXAMPLES are samples of inputs and
+their correct outputs, along with a short explanation for each.
+
+• NEGATIVE EXAMPLES are samples of inputs
+and their incorrect/invalid outputs, along with
+a short explanation for each.
+
+
+The above schema is based on that of Mishra et al.
+(2022b), though it is simplified. See Appendix C
+for the comparison.
+
+
+Task instances.     
+Given the instructions for each
+task, a model is expected to solve instances of that
+task. We use a unified format to organize the instances of all our tasks. More precisely, each instance consists of a textual input and a list of acceptable textual outputs. We limit the number of
+instances in each task to 6.5K to avoid an imbalance of instances between tasks
+
+
+
+
+Benchmark collection.      
+The benchmark was
+collected through a large community effort on
+GitHub.3 Tasks were collected and contributed by
+NLP practitioners who were either responding to
+our public invitation4 or students who were encouraged to contribute as part of their class project.5
+Contributors were encouraged to be creative and
+source the tasks from several resources: (a) existing public NLP datasets, (b) available intermediate
+annotations in crowdsourcing experiments (e.g.,
+paraphrasing questions or rating their quality during crowdsourcing a QA dataset), or (c) synthetic
+tasks that can be communicated to an average human in a few sentences (e.g., basic algebraic operations like number comparison, finding the longest
+palindrome substring, etc.). When using existing
+datasets or crowdsourcing annotations, contributors were encouraged to adopt the instructions used
+to create this dataset whenever available. This was
+done to ensure that the instructions were sufficient
+to define the tasks to average human readers. Tasks
+along with instructions and other meta information
+were contributed as JSON files via GitHub pull requests, which were reviewed by automated checks
+and peers. We had 88 contributors from diverse
+locations and backgrounds contribute to our repository
  
  
  
- 
- 
+Quality control.      
+Controlling the quality of this
+community-contributed data was done in several
+phases: (1) Upon creating a GitHub pull request
+of the proposed task, it immediately went through
+an automatic test. This process verified that the
+introduced file contained the expected fields and
+adhered to our desired properties (e.g., no duplicate 
+instances, the output labels are not heavily imbalanced, etc.) and (2) The proposed task was then
+peer-reviewed by 1–2 other expert contributors to
+ensure the clarity and sufficiency of instruction content. The review process was done iteratively until
+the reviewers were content with the quality of the
+proposed instruction. Specifically, reviewers were
+asked to verify that the instruction is clear and sufficient for an average language speaker to solve the
+underlying task (evaluation instances) while being
+grammatical, fluent, and concise. On average, the
+review of each GitHub pull request took about 4–
+6 iterations over the span of multiple days before
+being merged. (3) Lastly, the added tasks were presented to crowdworkers in order to collect feedback
+on the quality of the provided instructions, such as
+typos, clarity, or other issues (details in §A). Subsequently, one of the authors used this feedback to
+improve the task definitions of the instances. This
+feedback was done only for English tasks, as finding high-quality crowdworkers in other languages
+is nontrivial (Pavlick et al., 2014)
+
+
+
+Diversity of tasks.      
+Collecting tasks for SUPNATINST was carefully supervised to cover a wide
+variety of natural language understanding tasks, domains, and languages. To better understand this diversity, we comprehensively categorize tasks along
+three different dimensions:
+
+• TASK TYPE defines the nature of the mapping
+from instance inputs to outputs (e.g., question
+answering, classification, etc.).
+
+• LANGUAGE indicates the language(s) of the instances.
+
+• DOMAIN indicates the domain(s) to which
+the text of the tasks belong to (e.g., politics,
+medicine, dialogue, etc.).
+
+These different measures of categorization can be
+used to study different senses of generalization. In
+our empirical studies (§5), we study generalization
+along the axis of task types. We refer the reader
+to Fig. 10 in the appendix for the distribution of
+tasks among different task types, languages, and
+domains.
+
+
+
+Statistics.    
+Table 2 shows various statistics for the
+benchmark. In total, the dataset includes 1616 tasks
+and 5M instances. On average, each instruction is
+paired with 2.8 positive and 2.4 negative examples.
+The average definition length is 56.6 in words.
+
+
+
+
+
+
+
+
+
+
+
+
+
