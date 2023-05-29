@@ -35,10 +35,9 @@ served tasks, the number of instances per task,
  
  
  # 1 Introduction
- The NLP community has witnessed great progress
+The NLP community has witnessed great progress
  in building models for generalization to unseen
- tasks via in-context instructions (Mishra et al.,
- 2022b; Sanh et al., 2022; Wei et al., 2022) using
+ tasks via in-context instructions using
  large pretrained language models (Raffel et al.,
  2020; Brown et al., 2020). As remarkable as mod
 els like InstructGPT (Ouyang et al., 2022) are, the
@@ -48,104 +47,64 @@ vised data has remained understudied due to lim
 ited data released by the corporate entities behind
  major models. In addition, it is nearly impossible
  for the research community to extend and re-train
- these gigantic models. Addressing these two chal
- lengesnecessitatestheavailabilityoflarge-scale
- publicbenchmarksofabroadrangeofNLPtasks
- andtheirinstructionstofacilitatedevelopingand
- evaluatingmodelsthatcangeneralizetounseen
- tasks.
+ these gigantic models. Addressing these two cha
+ lenges necessitates the availability of large-scale
+public benchmarks of a broad range of NLP tasks
+and their instructions to facilitate developing and
+evaluating models that can generalize to unseen
+tasks
  
  
- Inthispaper,weconstructameta-dataset(i.e.,
- datasetofdatasets;Triantafillouetal.,2019)that
- consistsofawidevarietyofNLPtaskswiththeir
- instructions,andtrainamodelthatcanperform
- anewtaskgiventheinstruction,outperforming
- InstructGPT(whichuses16moreparameters).
- 
- 
- 
- Ourdataset,SUPER-NATURALINSTRUCTIONS
- (SUP-NATINSTforshort),isalargebenchmarkof
- 1,616NLPtasksandtheirnaturallanguageinstruc
-tions.Itbringsinadiversevarietyoftasks—76
- broadtasktypesspanning55differentlanguages.
- Eachtaskispairedupwithaninstructionthatcon
-sistsofthetaskdefinitionformappinganinputtext
- toataskoutputandseveralexamplesfordemon
-stratingthedesiredorundesiredoutput(seeFig.1
- asanexampletask).Thesetasksandtheirinstruc
-tionsarecontributedby88NLPpractitioners,in
- responsetoourpubliccall.Thesecontributionsare
- consolidatedafterseveralroundsofpeer-review
- andcrowdsourcedfeedbacktoensurequality.Hav
-ingthisdiverseandlarge-scaledataenablesus
- tocarefullysplitthetasksintotrainingandtest
- setsandsystematicallystudyhowstate-of-the-art
- methodsperformonthem.Table1andFigure2
- highlightpropertiesofSUP-NATINSTcomparedto
- relevantbenchmarks,emphasizingthediversityof
- tasksandinstructiontypesinourbenchmark
- 
- 
- Ourmodel,Tk-INSTRUCT,isagenerative
- modelfortransformingtaskinputsgivendeclar
-ativein-contextinstructions(taskdefinitionork
-shotexamples).Itisbuiltbymulti-tasktrainin
- of the T5 model (Raffel et al., 2020) over all the
- task instructions in our training set, and is eval
-uated on unseen tasks in the test set. Interest
-ingly, an 11B-parameter Tk-INSTRUCT can out
-perform the 175B-parameter InstructGPT model
- by 9.9 ROUGE-L points when evaluated on 119
- unseen English tasks, and the multilingual variant
- mTk-INSTRUCT outperforms InstructGPT by 13.3
- points on 35 non-English tasks (§6.1). According
- to human evaluation, Tk-INSTRUCT generates re
-sponses at least as well as the ground truth for 77%
- of the testing instances (§6.2), confirming its strong
- generalization to unseen tasks.
- 
- 
- The compelling empirical performance of Tk
-INSTRUCT confirms the importance of super-sized
- meta datasets such as our SUP-NATINST to facil
-itate research towards generalizable NLP models.
- We conduct extensive analysis to understand the
- important factors for this generalization (§7). Our
- analysis shows that scaling up the diversity of train
-ing tasks and the model size are both important
- for strong generalization to unseen tasks. Finally,
- we estimate performance upper bounds, suggesting
- further room for improvement.
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+ In this paper, we construct a meta-dataset (i.e.,
+dataset of datasets; Triantafillou et al., 2019) that
+consists of a wide variety of NLP tasks with their
+instructions, and train a model that can perform
+a new task given the instruction, outperforming
+InstructGPT (which uses 16× more parameters).
+
+Our dataset, SUPER-NATURALINSTRUCTIONS
+(SUP-NATINST for short), is a large benchmark of
+1,616 NLP tasks and their natural language instructions. It brings in a diverse variety of tasks—76
+broad task types spanning 55 different languages.
+Each task is paired up with an instruction that consists of the task definition for mapping an input text
+to a task output and several examples for demon
+strating the desired or undesired output (see Fig.1
+as an example task). These tasks and their instructions are contributed by 88 NLP practitioners, in
+response to our public call. These contributions are
+consolidated after several rounds of peer-review
+and crowdsourced feedback to ensure quality. Having this diverse and large-scale data enables us
+to carefully split the tasks into training and test
+sets and systematically study how state-of-the-art
+methods perform on them. Table 1 and Figure 2
+highlight properties of SUP-NATINST compared to
+relevant benchmarks, emphasizing the diversity of
+tasks and instruction types in our benchmark.
+
+
+Our model, Tk-INSTRUCT, is a generative
+model for transforming task inputs given declarative in-context instructions (task definition or kshot examples). It is built by multi-task training
+of the T5 model (Raffel et al., 2020) over all the
+task instructions in our training set, and is eval
+uated on unseen tasks in the test set. Interestingly, an 11B-parameter Tk-INSTRUCT can outperform the 175B-parameter InstructGPT model
+by 9.9 ROUGE-L points when evaluated on 119
+unseen English tasks, and the multilingual variant
+mTk-INSTRUCT outperforms InstructGPT by 13.3
+points on 35 non-English tasks (§6.1). According
+to human evaluation, Tk-INSTRUCT generates responses at least as well as the ground truth for 77%
+of the testing instances (§6.2), confirming its strong
+generalization to unseen tasks.
+
+
+The compelling empirical performance of TkINSTRUCT confirms the importance of super-sized
+meta datasets such as our SUP-NATINST to facilitate research towards generalizable NLP models.
+We conduct extensive analysis to understand the
+important factors for this generalization (§7). Our
+analysis shows that scaling up the diversity of training tasks and the model size are both important
+for strong generalization to unseen tasks. Finally,
+we estimate performance upper bounds, suggesting
+further room for improvement.
+
+
  
  
  
