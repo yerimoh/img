@@ -48,7 +48,7 @@ meta-trained LMs은 여전히 **meta-training 중에 보이지 않는 새로운 
   * **standard meta-training methods(DIRECT)**: LMs이 instruction 및 input instance가 주어졌을 때, **label를 생성**하도록 훈련    
   * **standard meta-training methods(CHANNEL)**: LMs이 label이 주어졌을 때, **instruction, input instance를 생성**하도록 훈련           
 * 또한 FLIPPED Learning에 대한 **unlikelihood loss을 추가:** LM이 잘못된 label option에 대한 task instruction을 생성하지 않도록 함.       
-* 추론 중에 FLIPPED Learning을 통해 훈련된 LM은 Figure 1:과 같이 **task instruction을 생성할 가능성이 가장 높은 label option을 선택**함
+* 추론 중에 FLIPPED Learning을 통해 훈련된 LM은 Figure 1:과 같이 **task instruction을 생성할 가능성이 가장 높은 label option을 선택**함   
 <img width="384" alt="image" src="https://github.com/yerimoh/img/assets/76824611/8cecf8f0-1651-4446-8027-ce7aa9c3e711">
 
 
@@ -60,16 +60,47 @@ by a significant margin, even without any demonstrations of the task (zero-shot)
 FLIPPED with baseline models on 14 additional common English NLP tasks, further amplifying its
 effectiveness compared to previous methods and models.
 
+**[구현 및 성능]**   
+* **구현**    
+**DIRECT 접근 방식**으로 훈련된 기존 **meta-trained LM T0**(Sanh et al., 2021)과 **비교**하기 위해,     
+**T0 대비 ~5%의 training compute만 사용**하여 20개의 서로 다른 데이터 세트(T0 훈련에 사용되는 데이터 세트의 약 절반)에서 **T5(Rafel et al., 2019) 모델을 Meta 훈련**하여 **FLIFFED를 구현**       
+* **성능**       
+BIG-Bench(Srivastava et al., 2022)의 14개 데이터 세트에 대한 평가는 FLIFFED가 효과적(Figure 2)      
+모든 LM에 비해 SoTA을 보여줄 뿐만 아니라 훨씬 더 큰 GPT-3 175B(3샷)를 크게 능가       
+또한 14개의 추가적인 일반적인 영어 NLP 작업에 대한 기준 모델과 FLIPPED를 비교하여 이전 방법 및 모델에 비해 그 효과를 더욱 확대함.      
+<img width="264" alt="image" src="https://github.com/yerimoh/img/assets/76824611/c34edf36-ad2d-470d-901f-57737e1368e6">
+
+We hypothesize that FLIPPED shows strong zero-shot generalization ability on unseen tasks because of the improved generalization capability to unseen labels. To test this hypothesis,
 
 
-
-We hypothesize that FLIPPED shows strong zero-shot generalization ability on unseen tasks because of the improved generalization capability to unseen labels. To test this hypothesis, we evaluate on various label pairs with different surface forms but with the same meaning (e.g. yes/no vs
+we evaluate on various label pairs with different surface forms but with the same meaning (e.g. yes/no vs
 agree/disagree). Results show FLIPPED has up to +20% average F1 score performance gap with T0-
 11B, indicating that FLIPPED LEARNING indeed significantly improves label generalization capability. This hypothesis is further bolstered by the fact that the tasks that show significant performance
 improvement from the baselines among the 28 evaluation datasets are datasets with unseen labels
 during meta-training. Because FLIPPED LEARNING conditions on the label instead of generating it,
 FLIPPED LEARNING is likely to avoid label overfitting, resulting in improved label generalization,
 which consequently leads to better task generalization.
+
+**[성능 증명]**       
+* 가설설정 & FLIFFED가 unseen tasks에서 strong zero-shot generalization ability를 보여준다고 가정하고 이를 증명하는 실험을 할 것임    
+* 우리는 unseen labels에 대한 generalization 기능이 향상되었다는 가설을 실험하기위해,     
+surface forms은 다르지만 의미는 동일한 다양한 레이블 쌍(예: yes/no vs agree/disagree)에서 평가함    
+* **결과**   
+  * FLIPPED가 T0-11B와 최대 +20%의 평균 F1 점수 성능 격차를 가지고 있음을 보여줌   
+  ➡ FLIPPED LEARNING이 label generalization 기능을 크게 향상시킨다는 것을 나타냄      
+  * 28개의 task 중 가장 성능 향상이 뚜렷한 task가 unseen labels datasets에 대한 evaluation이다     
+  ➡ 가설을 더욱 강력하게 증명 가능    
+  * FLIPPED LEARNING은 label을 생성하는 대신, **label에 FLIPPED LEARNING conditions이 있기 때문**에 label generalization을 피할 가능성이 높다.     
+ ➡ label generalization가 개선되어 결과적으로 작업 일반화가 개선된다.      
+
+
+**요약하자면, 본 논문의 contribution은 다음과 같다:**      
+* input instance와 label의 연결이 주어지면 **task instruction의 likelihood을 계산**하는 새로운 meta-training 방법인 **FLIPPED LEARNING을 제안**함    
+* 우도 손실을 추가하여 LM이 입력 인스턴스 레이블 대응에 따라 작업 명령을 생성하도록 합니다.
+
+• BIG-Bench 벤치마크의 14개 데이터 세트에서 11B 크기의 FLIFFED(FLIPPED Learning을 통해 훈련된 LM)가 메타 훈련된 T0-11B를 평균 8.4% 포인트 능가할 뿐만 아니라 16배 더 큰 3샷 GPT-3를 9.7% 포인트 능가한다는 것을 보여줍니다. 14개의 추가 영어 NLP 작업을 평가할 때, FLIFFED는 평균적으로 모든 기준 모델을 능가하여 제안된 방법의 효과를 더욱 입증합니다.
+
+• 우리는 플립드가 메타 훈련 중에 보이지 않는 레이블에 대한 일반화에 특히 효과적이며, 새로운 레이블 쌍에 대해 T0-11B를 평균 F1 점수 최대 20% 능가한다는 것을 보여줍니다.
 
 
 
