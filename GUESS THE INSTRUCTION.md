@@ -30,25 +30,26 @@ meta-trained LMs은 여전히 **meta-training 중에 보이지 않는 새로운 
 
 
 # 1 INTRODUCTION
-Large Language Models (LMs) pretrained on a vast amount of corpora are capable of solving various
-downstream tasks through instructions (task prompts) concatenated with the input instances without
-any task-specific fine-tuning (Brown et al., 2020; Rae et al., 2021; Chowdhery et al., 2022; Zhang
-et al., 2022). Previous work has shown that fine-tuning the LM on various downstream tasks by
-generating the correct answer given a prompted input (instruction and input), also referred to as
-meta-training, leads to significant improvement in zero-shot task generalization (Sanh et al., 2021;
-Wei et al., 2021; Wang et al., 2022). However, Webson & Pavlick (2021); Min et al. (2022c) show
-that LMs meta-trained through this standard approach are sensitive to different label words, implying
-that standard meta-trained LMs often fail to generalize to tasks that contain novel labels.
+**[previous work & problem]**       
+* **previous work: meta-training(prompt)**        
+   * 방대한 양의 **corpora에서 pretrain된** Large Language Models (LMs)은 **task-specific fine-tuning없이,**    
+   **input instances**와 **instructions (task prompts)** 을 통해 다양한 다운스트림 작업을 해결가능     
+   * meta-training이라고도 하는 prompted input (instruction and input)이 주어지면 정답을 생성하여,   
+    다양한 다운스트림 작업에서 LM을 fine-tuning하면 zero-shot task generalization가 크게 향상된다는 것을 보여주었음   
+* **meta-training의 문제점**    
+   * 그러나 이후 연구는 이 표준 접근법을 통해 <span style="background-color:#fff5b1">**meta-trained LM**이 **different label words에 민감**</span>하다는 것을 보여주며,    
+   이는 standard meta-trained LMs이 종종 <span style="background-color:#fff5b1">**novel labels을 포함하는 작업으로 generalize하지 못한다**는 것을 의미</span>한다.      
 
 
-In this paper, we introduce an alternative meta-training method called FLIPPED LEARNING that flips
-the task instruction and label space, training the underlying LM to generate the instruction when
-given the input instance and label. This differs from the standard meta-training methods which train
-the LM to generate the label given instruction and input instance (DIRECT) or generate instruction
-and input instance given the label (CHANNEL). Also, we add an unlikelihood loss for FLIPPED
-LEARNING, making the LM not generate the task instruction for an incorrect label option. During
-inference, the LM trained via FLIPPED LEARNING, referred to as FLIPPED, selects the label option
-that is most likely to generate the task instruction, as shown in Figure 1.
+**[FLIPPED LEARNING]**        
+* alternative meta-training method       
+* **task instruction과 label space**을 **flips**하여 **input instance와 label이 주어졌을 때** <span style="background-color:#fff5b1">기본 LM이 **instruction을 생성하도록 훈련**함.</span>   
+* 이는 standard meta-training methods와 다름        
+  * **standard meta-training methods(DIRECT)**: LMs이 instruction 및 input instance가 주어졌을 때, **label를 생성**하도록 훈련    
+  * **standard meta-training methods(CHANNEL)**: LMs이 label이 주어졌을 때, **instruction, input instance를 생성**하도록 훈련           
+* 또한 FLIPPED Learning에 대한 **unlikelihood loss을 추가:** LM이 잘못된 label option에 대한 task instruction을 생성하지 않도록 함.       
+* 추론 중에 FLIPPED Learning을 통해 훈련된 LM은 Figure 1:과 같이 **task instruction을 생성할 가능성이 가장 높은 label option을 선택**함
+<img width="384" alt="image" src="https://github.com/yerimoh/img/assets/76824611/8cecf8f0-1651-4446-8027-ce7aa9c3e711">
 
 
 To compare with an existing meta-trained LM T0 (Sanh et al., 2021) trained by the DIRECT approach, we implement FLIPPED by meta-training the T5 (Raffel et al., 2019) model on 20 different
