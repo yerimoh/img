@@ -238,47 +238,37 @@ SUP-NATINST를 통한 일반화 SUP-NATINST를 통한 일반화 벤치마크를 
 
 
 # 6. Conclusion
-We construct a large-scale benchmark consisting
-of a diverse set of NLP tasks and their instructions.
-This benchmark can serve as a rich playground for
-training or evaluation of models that can generalize
-to unseen tasks by following instructions. Furthermore, we train Tk-INSTRUCT using this data, and
-demonstrate its capability to perform unseen tasks
-to a surprising extent. We provide extensive analysis to understand the important factors for such
-generalization. We hope our data and model will facilitate future work towards more general-purpose
-models.
-
+* 다양한 NLP taskset와 그 instructions으로 구성된 large-scale benchmark를 구성함.        
+* 이 benchmark는 **instructions 따름으로써 unseen tasks로 generalize**할 수 있는 모델의 train 또는 evaluation를 위한 풍부한 역할을 할 수 있음.        
+* 또한 **이 데이터를 사용하여 Tk-INSTRUCT를 train**하고 unseen tasks를 놀라운 수준으로 수행하는 능력을 보여줌         
+* 우리는 그러한 generalization의 중요한 요소를 이해하기 위해 광범위한 분석을 제공함      
+* 리는 우리의 데이터와 모델이 더 범용적인 모델을 향한 향후 작업을 촉진하기를 바람       
 
 ----
 ----
 
 # 7. Limitations
-While the presented data offers a notable variety
-(e.g., diverse task types), its underlying distributions suffer from skews which should be addressed
-in future work (see Appendix F). On language diversity, the proposed benchmark is biased toward
-English. On output diversity, the collected tasks
-are generally still skewed to short responses, which
-might reflect the distribution of the available tasks
-in the field. This under-representation of the longtail of tasks poses a challenge for building generalpurpose models in the future. We hope future work
-addresses such distributional imbalances. Moreover, we see natural extensions of the instructionfollowing setup here in the context of other modalities such as vision or speech.
 
-Automatic evaluation of models’ performance
-is another challenge, considering the diverse set of
-tasks in our benchmark, and many of them being
-open-ended generation tasks. We use ROUGE-L as
-an aggregated metric in this paper and find it as a
-good proxy for the overall performance of the mod
-els, aligning well with human evaluation. However,
-there are specific tasks for which ROUGE-L might
-not serve as an effective proxy of quality (such
-as rewriting tasks or error correction tasks where
-copying the input can result in a high ROUGE-L
-score). We hope these issues will be addressed
-with the development of more powerful evaluation
-metrics for text generation.
+**[distributions의 문제]**            
+* 제시된 데이터는 variety(예: 다양한 ask types) 제공하지만, distributions는 향후 작업에서 다루어야 하는 왜곡으로 인해 어려움을 겪고 있음(Evaluation Metrics의 평가 정단성 문제)       
+* language diversity에 대해 제안된 벤치마크는 영어에 편향되어 있음       
+* output diversity에서 수집된 작업은 일반적으로 여전히 짧은 응답으로 치우쳐 있으며, 이는 현장에서 사용 가능한 tasks의 distribution를 반영할 수 있음        
+➡ 긴 tasks의 이러한 **과소 표현은 미래에 범용 모델을 구축하는 데 어려움을 제기**함.        
+* 우리는 앞으로의 작업이 그러한 distribution 불균형을 해결하기를 바람.        
+* 게다가, 우리는 비전이나 연설과 같은 다른 양식의 맥락에서 여기 설정된 이후의 명령어의 자연스러운 확장을 봅니다.
 
-In terms of computing power, we have experimented with models that were accessible to us and
-have made the resulting models publicly available.
-We also acknowledge that there are larger models
-that we were not able to train due to the limitations
-of our computational budget.
+
+**[Automatic evaluation of models’ performance]**      
+* benchmark의 다양한 task 세트와 그 중 많은 taks가 **open-ended generation tasks**임을 고려할 때 **모델의 성능을 자동으로 평가하는 것은 또 다른 과제**임.       
+* 우리는 본 논문에서 ROUGE-L을 aggregated metric으로 사용하고 인간의 평가와 잘 일치하여 모델의 전반적인 성능에 대한 좋은 프록시로 찾음          
+* 그러나 ROUGE-L이 품질의 효과적인 프록시 역할을 하지 못할 수 있는 특정 작업이 존재함          
+(eg: 입력을 복사하면 높은 ROUGE-L 점수를 얻을 수 있는 rewriting tasks 또는 error correction tasks)             
+* 텍스트 생성을 위한 보다 **강력한 평가 지표 개발로 이러한 문제가 해결되기를 바람**      
+
+
+
+**[예산의 한계]**       
+* 컴퓨팅 성능 측면에서, 우리는 우리가 접근할 수 있는 모델을 실험했고 결과 모델을 공개적으로 사용할 수 있게 함        
+* 우리는 또한 computational 예산의 한계로 인해 train할 수 없었던 더 큰 모델이 있다는 것을 인정함     
+
+
