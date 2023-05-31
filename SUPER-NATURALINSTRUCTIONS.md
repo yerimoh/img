@@ -101,54 +101,55 @@ The above schema is based on that of Mishra et al. (2022b), though it is simplif
 Task instances.
 Given the instructions for each task, a model is expected to solve instances of that task. We use a unified format to organize the instances of all our tasks. More precisely, each instance consists of a textual input and a list of acceptable textual outputs. We limit the number of instances in each task to 6.5K to avoid an imbalance of instances between tasks
 
-SUPER-NURATURE INstructions는 다양한 NLP 작업(그림 2a 참조)과 이를 평이한 언어로 설명하는 지침으로 구성된 메타데이터 세트(Triantafillou et al., 2019)입니다. 명령 스키마. 모든 작업 지침은 다음 부분으로 구성된 동일한 스키마(그림 1 참조)를 따릅니다. • DEFINITION은 주어진 작업을 자연어로 정의합니다. 이것은 입력 텍스트(예: 문장 또는 문서)가 출력 텍스트에 매핑되는 방식에 대한 완전한 정의입니다.
+SUPER-NURATURE INstructions는 다양한 NLP 작업(Figure 2(a))과 이를 plain language로 설명하는 instructions으로 구성된 메타데이터 세트다.      
 
-• 긍정적인 예는 각각의 간단한 설명과 함께 입력 및 올바른 출력의 샘플입니다.
-
-• 부정적인 예로는 각각의 간단한 설명과 함께 입력 샘플과 잘못된/잘못된 출력이 있습니다.
-
-상기 스키마는 Mishra et al. (2022b)의 스키마를 기반으로 하지만 단순화됩니다. 비교는 부록 C를 참조하십시오.
-
-태스크 인스턴스.
-각 작업에 대한 지침이 주어지면 모델이 해당 작업의 인스턴스를 해결할 것으로 예상됩니다. 통합된 형식을 사용하여 모든 작업의 인스턴스를 구성합니다. 보다 정확하게는 각 인스턴스는 텍스트 입력과 허용 가능한 텍스트 출력 목록으로 구성됩니다. 작업 간 인스턴스의 불균형을 방지하기 위해 각 작업의 인스턴스 수를 6.5K로 제한합니다
-
-벤치마크 컬렉션.
-벤치마크는 GitHub.3에 대한 대규모 커뮤니티 노력을 통해 수집되었습니다 과제는 공개 초대에 응답한 NLP 실무자들에 의해 수집 및 기여되었습니다.4 또는 학급 프로젝트의 일부로 기여하도록 권장된 학생들.5 기여자들은 창의적이고 여러 리소스에서 과제를 조달하도록 권장되었습니다. (a) 기존의 공개 NLP 데이터 세트, (b) 크라우드소싱 실험에서 사용 가능한 중간 주석(예: QA 데이터 세트를 크라우드소싱하는 동안 질문을 바꾸어 표현하거나 품질을 평가함) 또는 (c) 몇 문장으로 평균적인 인간에게 전달될 수 있는 합성 작업(예: 숫자 비교, 가장 긴 팔인드롬 하위 문자열 찾기, 등). 기존 데이터 세트 또는 크라우드소싱 주석을 사용할 때, 기여자는 가능할 때마다 이 데이터 세트를 만드는 데 사용되는 지침을 채택하도록 권장되었습니다. 이 작업은 지침이 평균적인 인간 판독기에 대한 작업을 정의하기에 충분하도록 보장하기 위해 수행되었습니다. 작업은 지침 및 기타 메타 정보와 함께 GitHub 풀 요청을 통해 JSON 파일로 제공되었으며 자동 검사 및 피어에서 이를 검토했습니다. 다양한 장소와 배경의 88명의 기여자가 저장소에 기여했습니다
-
-품질 관리.
-이 커뮤니티에서 제공하는 데이터의 품질 관리는 여러 단계로 수행되었습니다. (1) 제안된 작업의 GitHub 풀 요청을 생성한 후 즉시 자동 테스트를 거쳤습니다. 이 프로세스는 도입된 파일에 예상 필드가 포함되어 있고 원하는 속성(예: 중복 인스턴스 없음, 출력 레이블이 크게 불균형하지 않음 등)을 준수하는지 확인했으며, (2) 제안된 작업은 1-2명의 다른 전문가 기여자에 의해 동료 검토되어 교육 내용의 명확성과 충분성을 보장했습니다. 검토 프로세스는 검토자들이 제안된 지침의 품질에 만족할 때까지 반복적으로 수행되었습니다. 특히, 검토자들은 일반적인 언어 화자가 문법적이고 유창하며 간결하면서 기본 작업(평가 인스턴스)을 해결하기에 충분하고 명확한 지침인지 확인하도록 요청받았습니다. 각 GitHub 풀 요청에 대한 검토는 통합되기까지 며칠 동안 평균적으로 약 4-6회 반복되었습니다. (3) 마지막으로, 오타, 명확성 또는 기타 문제(자세한 내용은 §A)와 같은 제공된 지침의 품질에 대한 피드백을 수집하기 위해 추가된 작업을 크라우드 워커에게 제시했습니다. 그 후, 작성자 중 한 명이 이 피드백을 사용하여 인스턴스의 작업 정의를 개선했습니다. 이 피드백은 다른 언어로 고품질 크라우드 워커를 찾는 것이 중요하지 않기 때문에 영어 작업에만 수행되었습니다(Pavlick et al., 2014)
-
-작업의 다양성.
-SUPNATINST를 위한 작업 수집은 다양한 자연어 이해 작업, 도메인 및 언어를 포함하도록 세심하게 감독되었습니다. 이러한 다양성을 더 잘 이해하기 위해 작업을 세 가지 차원으로 포괄적으로 분류합니다:
-
-• 작업 유형은 인스턴스 입력에서 출력(예: 질문 답변, 분류 등)에 이르는 매핑의 특성을 정의합니다.
-
-• 언어는 인스턴스의 언어를 나타냅니다.
-
-• 도메인은 작업 텍스트가 속하는 도메인(예: 정치, 의학, 대화 등)을 나타냅니다.
-
-이러한 서로 다른 범주화 측도를 사용하여 일반화의 다양한 의미를 연구할 수 있습니다. 경험적 연구(§5)에서, 우리는 작업 유형의 축을 따라 일반화를 연구합니다. 다양한 작업 유형, 언어 및 도메인 간의 작업 분배를 위해 부록의 그림 10을 참조하십시오.
-
-Benchmark collection.
-The benchmark was collected through a large community effort on GitHub.3 Tasks were collected and contributed by NLP practitioners who were either responding to our public invitation4 or students who were encouraged to contribute as part of their class project.5 Contributors were encouraged to be creative and source the tasks from several resources: (a) existing public NLP datasets, (b) available intermediate annotations in crowdsourcing experiments (e.g., paraphrasing questions or rating their quality during crowdsourcing a QA dataset), or (c) synthetic tasks that can be communicated to an average human in a few sentences (e.g., basic algebraic operations like number comparison, finding the longest palindrome substring, etc.). When using existing datasets or crowdsourcing annotations, contributors were encouraged to adopt the instructions used to create this dataset whenever available. This was done to ensure that the instructions were sufficient to define the tasks to average human readers. Tasks along with instructions and other meta information were contributed as JSON files via GitHub pull requests, which were reviewed by automated checks and peers. We had 88 contributors from diverse locations and backgrounds contribute to our repository
-
-Quality control.
-Controlling the quality of this community-contributed data was done in several phases: (1) Upon creating a GitHub pull request of the proposed task, it immediately went through an automatic test. This process verified that the introduced file contained the expected fields and adhered to our desired properties (e.g., no duplicate instances, the output labels are not heavily imbalanced, etc.) and (2) The proposed task was then peer-reviewed by 1–2 other expert contributors to ensure the clarity and sufficiency of instruction content. The review process was done iteratively until the reviewers were content with the quality of the proposed instruction. Specifically, reviewers were asked to verify that the instruction is clear and sufficient for an average language speaker to solve the underlying task (evaluation instances) while being grammatical, fluent, and concise. On average, the review of each GitHub pull request took about 4– 6 iterations over the span of multiple days before being merged. (3) Lastly, the added tasks were presented to crowdworkers in order to collect feedback on the quality of the provided instructions, such as typos, clarity, or other issues (details in §A). Subsequently, one of the authors used this feedback to improve the task definitions of the instances. This feedback was done only for English tasks, as finding high-quality crowdworkers in other languages is nontrivial (Pavlick et al., 2014)
-
-Diversity of tasks.
-Collecting tasks for SUPNATINST was carefully supervised to cover a wide variety of natural language understanding tasks, domains, and languages. To better understand this diversity, we comprehensively categorize tasks along three different dimensions:
-
-• TASK TYPE defines the nature of the mapping from instance inputs to outputs (e.g., question answering, classification, etc.).
-
-• LANGUAGE indicates the language(s) of the instances.
-
-• DOMAIN indicates the domain(s) to which the text of the tasks belong to (e.g., politics, medicine, dialogue, etc.).
-
-These different measures of categorization can be used to study different senses of generalization. In our empirical studies (§5), we study generalization along the axis of task types. We refer the reader to Fig. 10 in the appendix for the distribution of tasks among different task types, languages, and domains.
+**[Instruction schema]**      
+* 모든 task instruction은 다음 부분으로 구성된  uniform schema (see Fig. 1)를 따른다.         
+   * **DEFINITION**     
+   주어진 task를 자연어로 정의함    
+   이것은 입력 텍스트(예: 문장 또는 문서)가 출력 텍스트에 매핑되는 방식에 대한  complete definition임   
+   * **POSITIVE EXAMPLES**      
+   긍정적인 예는 각각의 간단한 설명과 함께 입력 및 올바른 출력의 샘플임          
+   * **NEGATIVE EXAMPLES**        
+   각각의 간단한 설명과 함께 입력 샘플과 incorrect/invalid 출력이 있음     
 
 
+**[Task instances]**     
+* 각 task에 대한 instructions이 주어지면 모델이 해당 task의 instances를 해결할 것으로 예상됨     
+* 통합된 형식을 사용하여 모든 task의 instances를 구성함       
+* 각 instances textual input과 f acceptable textual outputs 목록으로 구성됨     
+* 작업 간 인스턴스의 불균형을 방지하기 위해 각 작업의 인스턴스 수를 6.5K로 제한함          
 
-Statistics.    
+**[Benchmark collection]**   
+* 벤치마크는 GitHub.3에 대한 대규모 커뮤니티 노력을 통해 수집됨    
+* task는 공개 초대에 응답한 NLP 실무자들에 의해 수집 및 기여됨      
+  * (a) 기존의 공개 NLP 데이터 세트      
+  * (b) 크라우드소싱 실험에서 사용 가능한 중간 주석 (예: QA 데이터 세트를 크라우드소싱하는 동안 질문을 바꾸어 표현하거나 품질을 평가함)      
+  * (c) 문장으로 인간에게 전달될 수 있는 synthetic tasks (예: 숫자 비교, 가장 긴 팔인드롬 하위 문자열 찾기, 등)    
+
+
+**[Quality control]**    
+* 이 community-contributed 데이터의 품질 관리는 여러 단계로 수행됨.           
+* 단계    
+**(1)** 제안된 작업의 GitHub 풀 요청을 생성한 후 즉시 automatic test를 거침       
+이 프로세스는 도입된 파일에 예상 필드가 포함되어 있고 원하는 속성(예: 중복 인스턴스 없음, 출력 레이블이 크게 불균형하지 않음 등)을 준수하는지 확인함    
+**(2)** 제안된 작업은 1-2명의 다른 전문가 기여자에 의해 동료 검토되어 교육 내용의 명확성과 충분성을 보장      
+**(3)** 마지막으로, 오타, 명확성 또는 기타 문제(자세한 내용은 §A)와 같은 제공된 지침의 품질에 대한 피드백을 수집하기 위해 추가된 작업을 크라우드 워커에게 제시
+
+**[Diversity of tasks]**     
+* SUPNATINST를 위한 작업 수집은 다양한 자연어 이해 작업, 도메인 및 언어를 포함하도록 세심하게 수집됨     
+* 이러한 다양성을 더 잘 이해하기 위해 task를 세 가지 차원으로 포괄적으로 분류함:     
+   * **TASK TYPE**    
+   인스턴스 입력에서 출력(예: 질문 답변, 분류 등)에 이르는 매핑의 특성     
+   * **LANGUAGE**      
+   instances의 언어를 나타냄
+   * **DOMAIN**        
+   작업 텍스트가 속하는 도메인(예: 정치, 의학, 대화 등)을 나타냄    
+
+이러한 서로 다른 categorization 측도를 사용하여 **일반화의 다양한 의미를 연구** 가능    
+
+
+**[Statistics]**        
 Table 2 shows various statistics for the
 benchmark. In total, the dataset includes 1616 tasks
 and 5M instances. On average, each instruction is
