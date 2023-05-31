@@ -52,14 +52,6 @@ meta-trained LMs은 여전히 **meta-training 중에 보이지 않는 새로운 
 <img width="384" alt="image" src="https://github.com/yerimoh/img/assets/76824611/8cecf8f0-1651-4446-8027-ce7aa9c3e711">
 
 
-To compare with an existing meta-trained LM T0 (Sanh et al., 2021) trained by the DIRECT approach, we implement FLIPPED by meta-training the T5 (Raffel et al., 2019) model on 20 different
-datasets (around half of the datasets used to train T0) with only ∼5% of training compute compared to T0. Evaluation on 14 datasets from BIG-Bench (Srivastava et al., 2022) demonstrate that
-FLIPPED is effective (Figure 2), not only showing state-of-the-art performance compared to all LMs
-regardless of size in the zero-shot setting, but also outperforming much larger GPT-3 175B (3-shot)
-by a significant margin, even without any demonstrations of the task (zero-shot). We also compare
-FLIPPED with baseline models on 14 additional common English NLP tasks, further amplifying its
-effectiveness compared to previous methods and models.
-
 **[구현 및 성능]**   
 * **구현**    
 **DIRECT 접근 방식**으로 훈련된 기존 **meta-trained LM T0**(Sanh et al., 2021)과 **비교**하기 위해,     
@@ -70,16 +62,6 @@ BIG-Bench(Srivastava et al., 2022)의 14개 데이터 세트에 대한 평가는
 또한 14개의 추가적인 일반적인 영어 NLP 작업에 대한 기준 모델과 FLIPPED를 비교하여 이전 방법 및 모델에 비해 그 효과를 더욱 확대함.      
 <img width="264" alt="image" src="https://github.com/yerimoh/img/assets/76824611/c34edf36-ad2d-470d-901f-57737e1368e6">
 
-We hypothesize that FLIPPED shows strong zero-shot generalization ability on unseen tasks because of the improved generalization capability to unseen labels. To test this hypothesis,
-
-
-we evaluate on various label pairs with different surface forms but with the same meaning (e.g. yes/no vs
-agree/disagree). Results show FLIPPED has up to +20% average F1 score performance gap with T0-
-11B, indicating that FLIPPED LEARNING indeed significantly improves label generalization capability. This hypothesis is further bolstered by the fact that the tasks that show significant performance
-improvement from the baselines among the 28 evaluation datasets are datasets with unseen labels
-during meta-training. Because FLIPPED LEARNING conditions on the label instead of generating it,
-FLIPPED LEARNING is likely to avoid label overfitting, resulting in improved label generalization,
-which consequently leads to better task generalization.
 
 **[성능 증명]**       
 * 가설설정 & FLIFFED가 unseen tasks에서 strong zero-shot generalization ability를 보여준다고 가정하고 이를 증명하는 실험을 할 것임    
@@ -96,7 +78,7 @@ surface forms은 다르지만 의미는 동일한 다양한 레이블 쌍(예: y
 
 **요약하자면, 본 논문의 contribution은 다음과 같다:**      
 * input instance와 label의 연결이 주어지면 **task instruction의 likelihood을 계산**하는 새로운 meta-training 방법인 **FLIPPED LEARNING을 제안**함    
-* 우도 손실을 추가하여 LM이 입력 인스턴스 레이블 대응에 따라 작업 명령을 생성하도록 합니다.
+* unlikelihood loss을 추가하여 LM이 입력 인스턴스 레이블 대응에 따라 작업 명령을 생성하도록 합니다.
 
 • BIG-Bench 벤치마크의 14개 데이터 세트에서 11B 크기의 FLIFFED(FLIPPED Learning을 통해 훈련된 LM)가 메타 훈련된 T0-11B를 평균 8.4% 포인트 능가할 뿐만 아니라 16배 더 큰 3샷 GPT-3를 9.7% 포인트 능가한다는 것을 보여줍니다. 14개의 추가 영어 NLP 작업을 평가할 때, FLIFFED는 평균적으로 모든 기준 모델을 능가하여 제안된 방법의 효과를 더욱 입증합니다.
 
