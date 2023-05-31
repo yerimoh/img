@@ -102,6 +102,39 @@ multilingual variant mTk-INSTRUCT는 35개의 영어가 아닌 작업에서 **13
    * **NEGATIVE EXAMPLES**        
    각각의 간단한 설명과 함께 입력 샘플과 incorrect/invalid 출력이 있음     
 
+
+<img width="296" alt="image" src="https://github.com/yerimoh/img/assets/76824611/24505140-e539-4f51-b192-fe057cc057eb">
+Evaluation categories, their evaluation metrics   
+
+각 task number에 따른 예
+<img width="338" alt="image" src="https://github.com/yerimoh/img/assets/76824611/6d61c539-e808-4441-87dc-e6dc8c27f46c">
+
+
+
+
+
+<details>
+<summary>📜 예시 더보기</summary>
+<div markdown="1">
+  
+ <img width="339" alt="image" src="https://github.com/yerimoh/img/assets/76824611/b7212697-9a1d-48d3-b4fb-f2158336c7af">
+<img width="335" alt="image" src="https://github.com/yerimoh/img/assets/76824611/3e068a3f-6cd0-431e-940e-3bb861e4d2ab">
+<img width="337" alt="image" src="https://github.com/yerimoh/img/assets/76824611/b3f56d08-812c-4be8-b1b8-7682dfb43607">
+<img width="332" alt="image" src="https://github.com/yerimoh/img/assets/76824611/1b3e9fc8-f3e4-47fe-99d4-81b701ec967d">
+<img width="345" alt="image" src="https://github.com/yerimoh/img/assets/76824611/be5cb3e0-055a-46d1-9ab6-c8e5a3de90a9">
+<img width="342" alt="image" src="https://github.com/yerimoh/img/assets/76824611/246f0675-944c-43ae-aff3-2d379c576bb8">
+<img width="333" alt="image" src="https://github.com/yerimoh/img/assets/76824611/e2606815-404c-4cd0-9b3b-4fd5773dad63">
+<img width="334" alt="image" src="https://github.com/yerimoh/img/assets/76824611/0660a175-2372-4727-a52a-637223d0b4ef">
+<img width="325" alt="image" src="https://github.com/yerimoh/img/assets/76824611/70af7dda-c9b4-4990-993f-ddc3267135ee">
+<img width="340" alt="image" src="https://github.com/yerimoh/img/assets/76824611/044be002-7274-4ffc-96bb-ab7318e49799">
+<img width="346" alt="image" src="https://github.com/yerimoh/img/assets/76824611/9be42642-c3f0-4c4a-acd1-d06b19110690">
+
+
+ 
+</div>
+</details>  
+
+
 ---
 
 **[Task instances]**     
