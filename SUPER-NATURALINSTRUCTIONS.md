@@ -182,49 +182,107 @@ multilingual variant mTk-INSTRUCT는 35개의 영어가 아닌 작업에서 **13
 
 
 # 4 Benchmarking Cross-Task
-Generalization with SUP-NATINST
-Here we provide our recommended recipe for
-benchmarking generalization via SUP-NATINST.
+Generalization with SUP-NATINST Here we provide our recommended recipe for benchmarking generalization via SUP-NATINST.
 
+SUP-NATINST를 통한 일반화 SUP-NATINST를 통한 일반화 벤치마크를 위한 권장 레시피를 제공합니다.
 
 ## 5.1 Evaluation Setup
-An Evaluation Split of Unseen Tasks.   
-
-We split
-the large collection of tasks in SUP-NATINST into
-two subsets: one for evaluation and the other for supervision. For evaluation tasks, we fix a manuallyselected collection of 12 categories that represent
-154 tasks. The large variety of tasks in SUPNATINST enables us to choose a diverse set of tasks
-for evaluation – such as those at word, sentence,
-and document levels, covering both classification
-and generation formats. Appendix G lists our evaluation tasks with examples for representative tasks.
-For an efficient evaluation, we sample a maximum
-of 100 instances for each task, which results in
-15,310 testing instances in total. The remaining
-tasks are used for training models.6
+**[An Evaluation Split of Unseen Tasks]**      
+* SUP-NATINST의 대규모 task 모음을 **two subsets으로 나눔**:    
+  * **evaluation용 task**   
+  154개 작업을 나타내는 12개 범주의 manuallyselected 컬렉션을 fix   
+  * **supervision용 task**            
 
 
-Divided Tracks for English and X-lignual Tasks.
+    
+<details>
+<summary>📜 대표적인 task에 대한 예제와 함께 evaluation task 보</summary>
+<div markdown="1">
 
-SUP-NATINST consists of tasks across multiple
-languages, which enables evaluating the model’s
-generalization to unseen tasks not only in English
-but also in other languages. Therefore, we divide
-our evaluation tasks into two tracks: one for English cross-task generalization (119 tasks) and the
-other for cross-lingual cross-task generalization
-(35 tasks). To the best of our knowledge, this is the
-first study in cross-lingual cross-task generalization (i.e., generalization to unseen tasks in different
-languages). Fig. 11 and Fig. 12 in the appendix
-contain the evaluation tasks for each track.
+<img width="307" alt="image" src="https://github.com/yerimoh/img/assets/76824611/db62316a-6170-482b-8859-812d8d4a73a0">
+ 
+ </div>
+</details>  
 
 
-Evaluation Metrics. 
 
-Due to the diversity of our
-tasks and the open-ended generation nature of our
-formulation,7 we adopt ROUGE-L (Lin, 2004) for
-reporting aggregated performance results. This is a
-soft string overlap metric that can be applied to a
-wide range of text generation tasks. We show that
-the ranking from this metric correlates well with
-accuracy for classification tasks in Appendix E. We
-also conduct a human evaluation in §6.2.
+
+**[Divided Tracks for English and X-lignual Tasks]**      
+* SUP-NATINST는 여러 언어에 걸친 task로 구성되어 영어뿐만 아니라 다른 언어로도 unseen tasks에 대한 모델의 generalization을 평가 가능     
+* 따라서 evaluation tasks을 two tracks으로 나눔     
+  * **English cross-task generalization (119 tasks)**     
+  * **cross-lingual cross-task generalization (35 tasks)**      
+  즉, 다른 언어로 unseen task에 대한 일반화          
+  
+
+
+
+**[Evaluation Metrics]**     
+* ROUGE-L(Lin, 2004)을 채택      
+이는 광범위한 텍스트 생성 작업에 적용할 수 있는 soft string overlap metric니다.     
+* human evaluation도 사용
+
+----
+
+## 4.2 Baselines and Existing Models
+Here we discuss a variety of baselines and competitive models for our target application. See Appendix D for implementation details.
+
+Heuristic baselines.    
+We first evaluate the following heuristics to evaluate the possible shortcuts in
+the data. Copying Demo Output copies the output
+of a random demonstration example. Since we balance the labels for our test tasks, the performance of
+this baseline will roughly equal a random guess or
+a majority baseline for classification tasks. Copying Instance Input copies the given instance input.
+This strategy performs well on tasks where the
+target output largely overlaps with the input (e.g.,
+question rewriting, grammar error correction).
+
+
+Off-the-shelf pretrained language models.      
+We
+evaluate existing LMs that are not fine-tuned with
+instruction-specific data. Specifically, we evaluate the 11B-parameter T5 (Raffel et al., 2020) as
+a direct counterpart of Tk-INSTRUCT. Due to the
+infilling pretraining objective of the original T5
+model, it cannot continue text well. Therefore,
+we evaluate its “LM-adapted” version, which is
+further trained with a language modeling objective (Lester et al., 2021). Additionally, we evaluate
+GPT-3 (Brown et al., 2020), a 175B-parameter autoregressive LM that has shown remarkable ability
+in following demonstrations provided in its prompt.
+
+
+
+
+
+Instruction-tuned models.        
+In addition to our TkINSTRUCT (§4), we evaluate existing models that
+are fine-tuned to follow language instructions. In
+particular, we evaluate InstructGPT (Ouyang et al.,
+2022) which uses reinforcement learning to incorporate human preferences into a GPT-3 pretrained
+model, and T0 (Sanh et al., 2022) which finetunes
+T5 on a collection of task prompts in PROMPTSOURCE (Bach et al., 2022).
+
+
+Upper bound estimates.        
+We estimate an upper
+bound on models’ generalization to unseen tasks by
+fine-tuning an oracle model on the tasks’ labeled
+instances. Since this model observes the hidden
+instances of the evaluation tasks, it is, by definition,
+an estimated upper bound to our generalizationbased models. Specifically, we fine-tune a T5-11B
+model on the 119 English evaluation tasks, and
+a mT5-13B model on the 35 non-English tasks,
+with 1K random training instances per task, without
+overlap with the evaluation instances.
+
+
+
+
+
+
+
+
+
+
+
+
