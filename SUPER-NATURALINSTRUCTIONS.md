@@ -156,49 +156,75 @@ multilingual variant mTk-INSTRUCT는 35개의 영어가 아닌 작업에서 **13
 
 # 3. Tk-INSTRUCT: Learning to Follow Instructions at Scale
 
-Defining Generalization to Unseen Tasks
+**[Defining Generalization to Unseen Tasks]**          
+* 각 task $$t$$는 natural language instruction $$I_t$$을 통해 정의됨       
+* 각 task에는 일련의 input/output instances($$X_t$$, $$Y_t$$)가 존재     
+* **목표:**    
+입력 $$x$$와 task instruction $$I_t: M(I_t, x) = y(x, y) ∈(X_t, Y_t)$$에 대해 $$M$$ 모델이 출력 $$y$$를 생성해야 함.        
+* **평가:**    
+특히 not observed(즉, 해당 instances가 M 훈련에 사용되지 않음)에 대해 모델 $$M$$을 평가하고자 함     
+* inference 시간에 task 학습하기 위한 유일한 source of signal는 작업의 definition 및 d demonstration examples를 포함하는 컨텍스트 내 instructions($$I_t$$)임     
+
+----
+
+**[Tk-INSTRUCT]**      
+* 우리는 <span style="color:#ffd33d">**SUP-NATINST에서 meta-trained을 받은 모델**인 Tk-INSTRUCT를 소개</span>함     
+* 이 모델은 **context 내 instruction에 따라 task를 해결함**       
+* SUP-NATINST의 <span style="color:#ffd33d">**다양한 task**로 인해 **이전보다 더 큰 규모로 이 multi-task meta-training을 수행 가능**</span>       
+* [T5 모델](https://yerimoh.github.io/LAN24/)을 기반으로 실험 및 분석을 수행      
+* 각 명령어는 (§2)에 설명된 대로 여러 요소로 구성되므로, 이러한 요소를 텍스트 형식에 매핑하고 입력 인스턴스 앞에 추가함.     
+* 아래 전체 instruction을 인코딩하는 방법을 보여줌     
+<img width="205" alt="image" src="https://github.com/yerimoh/img/assets/76824611/d77e9c2d-9de5-441a-a4a0-35bb5aba52fd">
+* 우리는 (§ 6.2 Instructing with Different Elements)에서 이러한 instruction들의 다양한 조합을 연구함       
+* 달리 명시되지 않는 한, 기본적으로 가장 효과적인 instruction 요소(즉, task definition와 두 가지 positive example)를 사용      
+----
+----
 
 
-. Each
-task t is defined via its natural language instruction
-It
-, and each task has a set of input/output instances
-(Xt
-, Yt). A model M is expected to produce the
-output y, given the input x and the task instruction
-It
-: M(It
-, x) = y, for (x, y) ∈ (Xt
-, Yt). In particular, we would like to evaluate model M on tasks
-that are not observed (i.e., their instances were not
-used for training M). The only source of signal
-for learning the task at inference time is in-context
-instructions It
-that contain a definition and demonstration examples of the task.
+# 4 Benchmarking Cross-Task
+Generalization with SUP-NATINST
+Here we provide our recommended recipe for
+benchmarking generalization via SUP-NATINST.
 
 
-Tk-INSTRUCT
+## 5.1 Evaluation Setup
+An Evaluation Split of Unseen Tasks.   
 
-We introduce Tk-INSTRUCT, a
-model that is meta-trained on SUP-NATINST for
-solving tasks given their in-context instructions.
-Previous work has shown the effectiveness of such
-meta-training in improving model’s ability to do incontext learning with either prompts (Zhong et al.,
-2021; Sanh et al., 2022) or demonstration examples
-(Min et al., 2022a). Because of the large variety
-of tasks in SUP-NATINST, we are able to do this
-multi-task meta-training at a larger scale than before. We conduct our experiments and analysis
-based on the T5 model (Raffel et al., 2020). Since
-each instruction It consists of multiple elements as
-described in our instruction schema (§3), we map
-these elements to textual format and append them
-before the input instance. Fig. 8 in the appendix
-shows how we encode the full instructions. We
-study different combinations of these instruction
-elements in §7.2. By default, we will use our most
-effective instruction elements (i.e., task definition
-and two positive examples) unless otherwise specified. In the same manner, we train the multilingual
-variant mTk-INSTRUCT based on the mT5 model
-(Xue et al., 2021).
+We split
+the large collection of tasks in SUP-NATINST into
+two subsets: one for evaluation and the other for supervision. For evaluation tasks, we fix a manuallyselected collection of 12 categories that represent
+154 tasks. The large variety of tasks in SUPNATINST enables us to choose a diverse set of tasks
+for evaluation – such as those at word, sentence,
+and document levels, covering both classification
+and generation formats. Appendix G lists our evaluation tasks with examples for representative tasks.
+For an efficient evaluation, we sample a maximum
+of 100 instances for each task, which results in
+15,310 testing instances in total. The remaining
+tasks are used for training models.6
 
 
+Divided Tracks for English and X-lignual Tasks.
+
+SUP-NATINST consists of tasks across multiple
+languages, which enables evaluating the model’s
+generalization to unseen tasks not only in English
+but also in other languages. Therefore, we divide
+our evaluation tasks into two tracks: one for English cross-task generalization (119 tasks) and the
+other for cross-lingual cross-task generalization
+(35 tasks). To the best of our knowledge, this is the
+first study in cross-lingual cross-task generalization (i.e., generalization to unseen tasks in different
+languages). Fig. 11 and Fig. 12 in the appendix
+contain the evaluation tasks for each track.
+
+
+Evaluation Metrics. 
+
+Due to the diversity of our
+tasks and the open-ended generation nature of our
+formulation,7 we adopt ROUGE-L (Lin, 2004) for
+reporting aggregated performance results. This is a
+soft string overlap metric that can be applied to a
+wide range of text generation tasks. We show that
+the ranking from this metric correlates well with
+accuracy for classification tasks in Appendix E. We
+also conduct a human evaluation in §6.2.
