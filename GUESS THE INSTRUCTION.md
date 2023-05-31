@@ -78,35 +78,33 @@ surface forms은 다르지만 의미는 동일한 다양한 레이블 쌍(예: y
 
 **요약하자면, 본 논문의 contribution은 다음과 같다:**      
 * input instance와 label의 연결이 주어지면 **task instruction의 likelihood을 계산**하는 새로운 meta-training 방법인 **FLIPPED LEARNING을 제안**함    
-* unlikelihood loss을 추가하여 LM이 입력 인스턴스 레이블 대응에 따라 작업 명령을 생성하도록 합니다.
-
-• BIG-Bench 벤치마크의 14개 데이터 세트에서 11B 크기의 FLIFFED(FLIPPED Learning을 통해 훈련된 LM)가 메타 훈련된 T0-11B를 평균 8.4% 포인트 능가할 뿐만 아니라 16배 더 큰 3샷 GPT-3를 9.7% 포인트 능가한다는 것을 보여줍니다. 14개의 추가 영어 NLP 작업을 평가할 때, FLIFFED는 평균적으로 모든 기준 모델을 능가하여 제안된 방법의 효과를 더욱 입증합니다.
-
-• 우리는 플립드가 메타 훈련 중에 보이지 않는 레이블에 대한 일반화에 특히 효과적이며, 새로운 레이블 쌍에 대해 T0-11B를 평균 F1 점수 최대 20% 능가한다는 것을 보여줍니다.
-
-
-
-
-In summary, our contributions are as follows:     
-• We propose FLIPPED LEARNING, a novel meta-training method that computes the likelihood of the task instruction given the concatenation of input instance and label. By adding
-an unlikelihood loss, we make LMs generate the task instruction depending on the input
-instance-label correspondence.
-
-• On 14 datasets from the BIG-Bench benchmark, we show that 11B-sized FLIPPED (LM
-trained through FLIPPED LEARNING) outperforms not only meta-trained T0-11B by 8.4%
-points on average, but also 16x larger 3-shot GPT-3 by 9.7% points. When evaluating on
-14 additional English NLP tasks, FLIPPED outperforms all baseline models on average,
-further demonstrating the effectiveness of our proposed method.
-
-• We show that FLIPPED is particularly effective on generalization to labels that are unseen
-during meta-training, outperforming T0-11B by up to 20% average F1 score for novel label
-pairs.
+* **unlikelihood loss을 추가**하여 LM이 입력 인스턴스 레이블 대응에 따라 작업 명령을 생성하도록 합니다.   
+* BIG-Bench benchmark의 14개 데이터 세트에서 11B-sized FLIPPED(FLIPPED Learning을 통해 훈련된 LM)가 **meta-trained T0-11B 를 평균 8.4% 포인트 능가**할 뿐만 아니라 **16배 더 큰 3-shot GPT-3를 9.7% 포인트 능가**함.      
+14개의 추가 영어 NLP 작업을 평가할 때, FLIFFED는 평균적으로 모든 기준 모델을 능가하여 제안된 방법의 효과를 더욱 입증함           
+* 우리는 FLIPPED가 meta-training 중에 **unseen 레이블에 대한 generalization에 특히 효과적**이며, **새로운 레이블 쌍**에 대해 T0-11B를 평균 F1 점수 최대 20% 능가한다는 것을 보여줌    
 
 
 
 
 
 
+-----
+
+# 8 LIMITATIONS
+In this work, we do not explore FLIPPED for performing unseen tasks that do not have label options such as free-form generation. However, we believe FLIPPED can be used for these tasks as
+well by obtaining the list of label options from a different LM, which we leave for future work.
+FLIPPED LEARNING also assumes that the task instruction and input instance can be separated during zero-shot inference. However, although instruction-based benchmarks such as Natural Instructions (Mishra et al., 2022; Wang et al., 2022) define the prompted input as a na¨ıve concatenation of
+task instruction and input instance, this is not guaranteed for prompt libraries such as Promptsource
+(Bach et al., 2022). Therefore, FLIPPED LEARNING needs additional techniques to separate the task
+instruction and the input instances as shown in Section 3.1.
+
+
+# 9 CONCLUSION
+In this paper, we propose FLIPPED LEARNING, which is a meta-training method that flips the instruction and label space, training the LM to compute the conditional probability of the task instruction given input instance and label. Our findings show that by conditioning on the label space
+instead of generating it, FLIPPED LEARNING avoids label overfitting, leading to better zero-shot
+unseen task generalization capabilities especially for tasks that contain various novel labels. To this
+end, we suggest the research community consider FLIPPED LEARNING for making efficient LMs
+that can generalize to challenging unseen tasks.
 
 
 
