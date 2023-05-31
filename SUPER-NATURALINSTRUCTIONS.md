@@ -90,18 +90,7 @@ multilingual variant mTk-INSTRUCT는 35개의 영어가 아닌 작업에서 **13
 -----
 
 # 2 SUPER-NATURALINSTRUCTIONS
-SUPER-NATURALINSTRUCTIONS is a metadataset (Triantafillou et al., 2019) consisting of a variety of NLP tasks (see Fig. 2a) and instructions that describe them in plain language. Instruction schema. All task instructions follow the same uniform schema (see Fig. 1) which is composed of the following parts: • DEFINITION defines a given task in natural language. This is a complete definition of how an input text (e.g., a sentence or a document) is expected to be mapped to an output text.
-
-• POSITIVE EXAMPLES are samples of inputs and their correct outputs, along with a short explanation for each.
-
-• NEGATIVE EXAMPLES are samples of inputs and their incorrect/invalid outputs, along with a short explanation for each.
-
-The above schema is based on that of Mishra et al. (2022b), though it is simplified. See Appendix C for the comparison.
-
-Task instances.
-Given the instructions for each task, a model is expected to solve instances of that task. We use a unified format to organize the instances of all our tasks. More precisely, each instance consists of a textual input and a list of acceptable textual outputs. We limit the number of instances in each task to 6.5K to avoid an imbalance of instances between tasks
-
-SUPER-NURATURE INstructions는 다양한 NLP 작업(Figure 2(a))과 이를 plain language로 설명하는 instructions으로 구성된 메타데이터 세트다.      
+   
 
 **[Instruction schema]**      
 * 모든 task instruction은 다음 부분으로 구성된  uniform schema (see Fig. 1)를 따른다.         
@@ -113,12 +102,15 @@ SUPER-NURATURE INstructions는 다양한 NLP 작업(Figure 2(a))과 이를 plain
    * **NEGATIVE EXAMPLES**        
    각각의 간단한 설명과 함께 입력 샘플과 incorrect/invalid 출력이 있음     
 
+---
 
 **[Task instances]**     
 * 각 task에 대한 instructions이 주어지면 모델이 해당 task의 instances를 해결할 것으로 예상됨     
 * 통합된 형식을 사용하여 모든 task의 instances를 구성함       
 * 각 instances textual input과 f acceptable textual outputs 목록으로 구성됨     
 * 작업 간 인스턴스의 불균형을 방지하기 위해 각 작업의 인스턴스 수를 6.5K로 제한함          
+
+---
 
 **[Benchmark collection]**   
 * 벤치마크는 GitHub.3에 대한 대규모 커뮤니티 노력을 통해 수집됨    
@@ -127,6 +119,7 @@ SUPER-NURATURE INstructions는 다양한 NLP 작업(Figure 2(a))과 이를 plain
   * (b) 크라우드소싱 실험에서 사용 가능한 중간 주석 (예: QA 데이터 세트를 크라우드소싱하는 동안 질문을 바꾸어 표현하거나 품질을 평가함)      
   * (c) 문장으로 인간에게 전달될 수 있는 synthetic tasks (예: 숫자 비교, 가장 긴 팔인드롬 하위 문자열 찾기, 등)    
 
+---
 
 **[Quality control]**    
 * 이 community-contributed 데이터의 품질 관리는 여러 단계로 수행됨.           
@@ -135,6 +128,8 @@ SUPER-NURATURE INstructions는 다양한 NLP 작업(Figure 2(a))과 이를 plain
 이 프로세스는 도입된 파일에 예상 필드가 포함되어 있고 원하는 속성(예: 중복 인스턴스 없음, 출력 레이블이 크게 불균형하지 않음 등)을 준수하는지 확인함    
 **(2)** 제안된 작업은 1-2명의 다른 전문가 기여자에 의해 동료 검토되어 교육 내용의 명확성과 충분성을 보장      
 **(3)** 마지막으로, 오타, 명확성 또는 기타 문제(자세한 내용은 §A)와 같은 제공된 지침의 품질에 대한 피드백을 수집하기 위해 추가된 작업을 크라우드 워커에게 제시
+
+---
 
 **[Diversity of tasks]**     
 * SUPNATINST를 위한 작업 수집은 다양한 자연어 이해 작업, 도메인 및 언어를 포함하도록 세심하게 수집됨     
@@ -148,23 +143,62 @@ SUPER-NURATURE INstructions는 다양한 NLP 작업(Figure 2(a))과 이를 plain
 
 이러한 서로 다른 categorization 측도를 사용하여 **일반화의 다양한 의미를 연구** 가능    
 
+----
 
 **[Statistics]**        
-Table 2 shows various statistics for the
-benchmark. In total, the dataset includes 1616 tasks
-and 5M instances. On average, each instruction is
-paired with 2.8 positive and 2.4 negative examples.
-The average definition length is 56.6 in words.
+* Table 2는 벤치마크에 대한 다양한 통계를 보여줌.        
+* 데이터 세트에는 총 1616개의 task과 5M개의 instances가 포함됨        
+<img width="221" alt="image" src="https://github.com/yerimoh/img/assets/76824611/a95c3055-6319-4330-b8f4-38237613d277">
 
 
+----
+----
+
+# 3. Tk-INSTRUCT: Learning to Follow Instructions at Scale
+
+Defining Generalization to Unseen Tasks
 
 
+. Each
+task t is defined via its natural language instruction
+It
+, and each task has a set of input/output instances
+(Xt
+, Yt). A model M is expected to produce the
+output y, given the input x and the task instruction
+It
+: M(It
+, x) = y, for (x, y) ∈ (Xt
+, Yt). In particular, we would like to evaluate model M on tasks
+that are not observed (i.e., their instances were not
+used for training M). The only source of signal
+for learning the task at inference time is in-context
+instructions It
+that contain a definition and demonstration examples of the task.
 
 
+Tk-INSTRUCT
 
-
-
-
-
+We introduce Tk-INSTRUCT, a
+model that is meta-trained on SUP-NATINST for
+solving tasks given their in-context instructions.
+Previous work has shown the effectiveness of such
+meta-training in improving model’s ability to do incontext learning with either prompts (Zhong et al.,
+2021; Sanh et al., 2022) or demonstration examples
+(Min et al., 2022a). Because of the large variety
+of tasks in SUP-NATINST, we are able to do this
+multi-task meta-training at a larger scale than before. We conduct our experiments and analysis
+based on the T5 model (Raffel et al., 2020). Since
+each instruction It consists of multiple elements as
+described in our instruction schema (§3), we map
+these elements to textual format and append them
+before the input instance. Fig. 8 in the appendix
+shows how we encode the full instructions. We
+study different combinations of these instruction
+elements in §7.2. By default, we will use our most
+effective instruction elements (i.e., task definition
+and two positive examples) unless otherwise specified. In the same manner, we train the multilingual
+variant mTk-INSTRUCT based on the mT5 model
+(Xue et al., 2021).
 
 
