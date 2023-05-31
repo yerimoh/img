@@ -2,17 +2,31 @@
 
 
 # ABSTRACT
-Meta-training, which fine-tunes the language model (LM) on various downstream
-tasks by maximizing the likelihood of the target label given the task instruction and input instance, has improved the zero-shot task generalization performance. However, meta-trained LMs still struggle to generalize to challenging
-tasks containing novel labels unseen during meta-training. In this paper, we propose FLIPPED LEARNING, an alternative method of meta-training which trains the
-LM to generate the task instruction given the input instance and label. During inference, the LM trained with FLIPPED LEARNING, referred to as FLIPPED, selects
-the label option that is most likely to generate the task instruction. On 14 tasks
-of the BIG-bench benchmark, the 11B-sized FLIPPED outperforms zero-shot T0-
-11B (Sanh et al., 2021) and even a 16 times larger 3-shot GPT-3 (175B) (Brown
-et al., 2020) on average by 8.4% and 9.7% points, respectively. FLIPPED gives particularly large improvements on tasks with unseen labels, outperforming T0-11B
-by up to +20% average F1 score. This indicates that the strong task generalization
-of FLIPPED comes from improved generalization to novel labels. We release our
-code at github.com/seonghyeonye/Flipped-Learning.
+**[Meta-training이란?]**             
+* **정의**     
+task instruction 및 input instance가 주어진 target label의 가능성을 최대화하여 다양한 다운스트림 작업에서 언어 모델(LM)을 fine-tunes          
+보통 좋은 meta-learning model은 train time동안 접하지 않았던 새로운 task나 environment에 대해 잘 적응하거나, generalization을 잘한다는 것임     
+* **효과**   
+Meta-training은 **generation성능을 향상**시킴       
+* **한계**     
+meta-trained LMs은 여전히 **meta-training 중에 보이지 않는 새로운 레이블을 포함하는 task**를 **generalize**하는 데 어려움을 겪고 있음.       
+
+
+**[본 논문의 제안]**    
+* **FLIPPED LEARNING 제안**          
+   * **input instance와 label이 주어진 task instruction을 생성**하도록 LM을 훈련시키는 **meta-training의 대안적인** 방법     
+   * inference 중에 FLIPPED Learning으로 훈련된 LM은 **task instruction을 생성할 가능성이 가장 높은 label option을 선택**함.      
+* **성능**    
+   * BIG-bench benchmark의 14개 작업에서 11B-sized FLIPPED는  zero-shot T0- 11B(Sanh et al., 2021)와 심지어 16배 더 큰 3-shot GPT-3(175B)(Brown et al., 2020)를 각각 평균 8.4%, 9.7% 포인트 능가함       
+   * FLIFFED는 **unseen labels 작업에서 특히 큰 성능 향상** (T0-11B를 최대 +20% 평균 F1 점수까지 능가)      
+   * 이는 FLIPPED의 강력한 task generalization가 향상된 generalization에서 새로운 labels로 온다는 것을 나타냄        
+* **코드**        
+[링크](github.com/seonghyeonye/Flipped-Learning) 에서 코드를 공개함   
+
+
+
+
+----
 
 
 # 1 INTRODUCTION
