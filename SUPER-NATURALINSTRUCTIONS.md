@@ -1,4 +1,4 @@
-# UPER-NATURALINSTRUCTIONS:  Generalization via Declarative Instructions on 1600+ NLP Tasks
+# SUPER-NATURALINSTRUCTIONS:  Generalization via Declarative Instructions on 1600+ NLP Tasks
 
 
 # Abstract
@@ -223,66 +223,62 @@ SUP-NATINST를 통한 일반화 SUP-NATINST를 통한 일반화 벤치마크를 
 * human evaluation도 사용
 
 ----
+---
 
-## 4.2 Baselines and Existing Models
-Here we discuss a variety of baselines and competitive models for our target application. See Appendix D for implementation details.
+# 5. Experimental Results   
 
-Heuristic baselines.    
-We first evaluate the following heuristics to evaluate the possible shortcuts in
-the data. Copying Demo Output copies the output
-of a random demonstration example. Since we balance the labels for our test tasks, the performance of
-this baseline will roughly equal a random guess or
-a majority baseline for classification tasks. Copying Instance Input copies the given instance input.
-This strategy performs well on tasks where the
-target output largely overlaps with the input (e.g.,
-question rewriting, grammar error correction).
+<img width="288" alt="image" src="https://github.com/yerimoh/img/assets/76824611/0d5f329b-f356-46de-972c-4027e38695e6">
+* Instruction-tuning enables **stronger generalization** to unseen tasks      
+* Our **Tk-INSTRUCT outperforms** InstructGPT      
+* There is a **sizable gap for improvement**     
 
 
-Off-the-shelf pretrained language models.      
-We
-evaluate existing LMs that are not fine-tuned with
-instruction-specific data. Specifically, we evaluate the 11B-parameter T5 (Raffel et al., 2020) as
-a direct counterpart of Tk-INSTRUCT. Due to the
-infilling pretraining objective of the original T5
-model, it cannot continue text well. Therefore,
-we evaluate its “LM-adapted” version, which is
-further trained with a language modeling objective (Lester et al., 2021). Additionally, we evaluate
-GPT-3 (Brown et al., 2020), a 175B-parameter autoregressive LM that has shown remarkable ability
-in following demonstrations provided in its prompt.
+----
+----
 
 
+# 6. Conclusion
+We construct a large-scale benchmark consisting
+of a diverse set of NLP tasks and their instructions.
+This benchmark can serve as a rich playground for
+training or evaluation of models that can generalize
+to unseen tasks by following instructions. Furthermore, we train Tk-INSTRUCT using this data, and
+demonstrate its capability to perform unseen tasks
+to a surprising extent. We provide extensive analysis to understand the important factors for such
+generalization. We hope our data and model will facilitate future work towards more general-purpose
+models.
 
 
+----
+----
 
-Instruction-tuned models.        
-In addition to our TkINSTRUCT (§4), we evaluate existing models that
-are fine-tuned to follow language instructions. In
-particular, we evaluate InstructGPT (Ouyang et al.,
-2022) which uses reinforcement learning to incorporate human preferences into a GPT-3 pretrained
-model, and T0 (Sanh et al., 2022) which finetunes
-T5 on a collection of task prompts in PROMPTSOURCE (Bach et al., 2022).
+# 7. Limitations
+While the presented data offers a notable variety
+(e.g., diverse task types), its underlying distributions suffer from skews which should be addressed
+in future work (see Appendix F). On language diversity, the proposed benchmark is biased toward
+English. On output diversity, the collected tasks
+are generally still skewed to short responses, which
+might reflect the distribution of the available tasks
+in the field. This under-representation of the longtail of tasks poses a challenge for building generalpurpose models in the future. We hope future work
+addresses such distributional imbalances. Moreover, we see natural extensions of the instructionfollowing setup here in the context of other modalities such as vision or speech.
 
+Automatic evaluation of models’ performance
+is another challenge, considering the diverse set of
+tasks in our benchmark, and many of them being
+open-ended generation tasks. We use ROUGE-L as
+an aggregated metric in this paper and find it as a
+good proxy for the overall performance of the mod
+els, aligning well with human evaluation. However,
+there are specific tasks for which ROUGE-L might
+not serve as an effective proxy of quality (such
+as rewriting tasks or error correction tasks where
+copying the input can result in a high ROUGE-L
+score). We hope these issues will be addressed
+with the development of more powerful evaluation
+metrics for text generation.
 
-Upper bound estimates.        
-We estimate an upper
-bound on models’ generalization to unseen tasks by
-fine-tuning an oracle model on the tasks’ labeled
-instances. Since this model observes the hidden
-instances of the evaluation tasks, it is, by definition,
-an estimated upper bound to our generalizationbased models. Specifically, we fine-tune a T5-11B
-model on the 119 English evaluation tasks, and
-a mT5-13B model on the 35 non-English tasks,
-with 1K random training instances per task, without
-overlap with the evaluation instances.
-
-
-
-
-
-
-
-
-
-
-
-
+In terms of computing power, we have experimented with models that were accessible to us and
+have made the resulting models publicly available.
+We also acknowledge that there are larger models
+that we were not able to train due to the limitations
+of our computational budget.
