@@ -91,22 +91,21 @@ surface forms은 다르지만 의미는 동일한 다양한 레이블 쌍(예: y
 -----
 
 # 8 LIMITATIONS
-In this work, we do not explore FLIPPED for performing unseen tasks that do not have label options such as free-form generation. However, we believe FLIPPED can be used for these tasks as
-well by obtaining the list of label options from a different LM, which we leave for future work.
-FLIPPED LEARNING also assumes that the task instruction and input instance can be separated during zero-shot inference. However, although instruction-based benchmarks such as Natural Instructions (Mishra et al., 2022; Wang et al., 2022) define the prompted input as a na¨ıve concatenation of
-task instruction and input instance, this is not guaranteed for prompt libraries such as Promptsource
-(Bach et al., 2022). Therefore, FLIPPED LEARNING needs additional techniques to separate the task
-instruction and the input instances as shown in Section 3.1.
+* 본 연구에서는 **free-form generation과 같은 label options이 없는 unseen tasks을 수행하기 위해 FLIPPED를 탐색하지 않는다**.         
+* 그러나 우리는 FLIFFED가 future work을 위해 남겨둔 다른 LM에서 label options 목록을 얻음으로써 이러한 작업에도 사용될 수 있다고 생각한다.     
+* FLIPPED LEARNING은 또한 zero-shot inference 중에 **task instruction과 input instance가 분리될 수 있다고 가정**한다.      
+그러나 Natural Instructions(Mishra et al., 2022; Wang et al., 2022)와 같은 instruction-based benchmark는 prompted input을 task instruction과 input instance의 na¨ıve concatenation로 정의하지만, 이는 Promptsource(Bach et al., 2022)와 같은 prompt libraries에 대해서는 보장되지 않는다.      
+* 따라서 FLIPPED Learning은 task instruction과 입력 instruction를 분리하기 위한 추가 기술이 필요함       
 
+
+-----
 
 # 9 CONCLUSION
-In this paper, we propose FLIPPED LEARNING, which is a meta-training method that flips the instruction and label space, training the LM to compute the conditional probability of the task instruction given input instance and label. Our findings show that by conditioning on the label space
-instead of generating it, FLIPPED LEARNING avoids label overfitting, leading to better zero-shot
-unseen task generalization capabilities especially for tasks that contain various novel labels. To this
-end, we suggest the research community consider FLIPPED LEARNING for making efficient LMs
-that can generalize to challenging unseen tasks.
-
-
+* 본 논문에서, 우리는 **instruction과 label space을 뒤집는 meta-training method인 FLIPPED LEARNING을 제안**하며,     
+LM을 훈련시켜 input instance와 label이 주어진 task instruction의 conditional probability을 계산함    
+* 우리의 연구 결과는 **label space**을 생성하는 대신 **conditioning**함으로써 FLIPPED LEARNING이 **label overfitting을 방지**하여,   
+특히 다양한 novel labels을 포함하는 task에 대해 보이지 않는 **unseen task generalization 기능을 향상**시킨다는 것을 보여줌    
+* 이를 위해 연구 커뮤니티에서 unseen tasks에 generalize할 수 있는 효율적인 LM을 만들기 위해 FLIPPED LEARNING을 고려할 것을 제안한다.       
 
 
 
