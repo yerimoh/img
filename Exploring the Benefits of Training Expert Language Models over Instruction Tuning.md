@@ -2,25 +2,22 @@
 
 
 # Abstract
-Recently, Language Models (LMs) instructiontuned on multiple tasks, also known as multitaskprompted fine-tuning (MT), have shown the capability to generalize to unseen tasks. Previous work
-has shown that scaling the number of training
-tasks is the key component in making stronger MT
-LMs. In this work, we report an unexpected finding that an expert LM fine-tuned on just a single
-task can outperform an MT LM trained with 300+
-different tasks on 11 different unseen datasets and
-on 13 datasets of the BIG-bench benchmark by
-a mean accuracy of 3.20% and 1.29%, respectively. This finding casts doubt on the previously
-held belief that simply scaling the number of tasks
-makes stronger MT LMs. Leveraging this finding,
-we further show that this distributed approach of
-training a separate expert LM per training task instead of a single MT LM for zero-shot inference
-possesses many benefits including (1) avoiding
-negative task transfer that often occurs during
-instruction tuning, (2) being able to continually
-learn new tasks without having to re-train on previous tasks to avoid catastrophic forgetting, and (3)
-showing compositional capabilities when merging
-individual experts together. The code is available
-at https://github.com/joeljang/ELM.
+       
+최근 multitaskprompted fine-tuning (MT)이라고도 하는 여러 작업에 조정된 Language Models (LMs) instructiontuned은 unseen tasks로 generalize 기능을 보여주었다. 
+
+
+**[Problem of Previous work]**     
+* **training tasks의 수를 확장**하는 것이 **더 강력한 MT LMs을 만드는 핵심 구성 요소**임을 보여주었다.       
+* ⚠️ 우리는 **a single task에 fine-tuned된 expert LM**이 매우 좋은 결과를 내는 위 가설을 부정할 만할 결과 발견   
+➡ <span style="background-color:#fff5b1">이 발견은 **단순히 작업의 수를 증가**시키는 것이 **더 강력한 MT LM을 만든다**는 기존의 믿음에 **의문**을 던짐</span>     
+
+**[본 논문의 main idea]**     
+* 이 발견을 활용하여, 또한 zero-shot inference을 위한 single MT LM 대신,     
+**training task당 별도의 expert LM train시키는 분산 접근 방식**은     
+    * **(1)** instruction tuning 중 종종 발생하는 **negative task transfer을 피하는 것**을 포함하여 많은 이점을 가지고 있음을 보여준다       
+    * (2) catastrophic forgetting을 피하기 위해 previous tasks를 재교육하지 않고도 **새로운 tasks를 지속적으로 학습 가능**     
+    * (3) 개별 experts를 통합할 때 구성 능력(compositional capabilities)을 보여줌      
+* 코드는 [링크](https://github.com/joeljang/ELM)에서 확인할 수 가능    
 
 
 
@@ -30,7 +27,7 @@ at https://github.com/joeljang/ELM.
 
 
 
-1. Introduction
+# 1. Introduction
 Recent works show pretrained Language Models (LMs) that
 have been fine-tuned on multiple tasks with instructions
 (prompted instances), also known as multitask-prompted
