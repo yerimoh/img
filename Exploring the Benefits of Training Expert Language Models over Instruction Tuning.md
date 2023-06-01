@@ -15,8 +15,8 @@
 * 이 발견을 활용하여, 또한 zero-shot inference을 위한 single MT LM 대신,     
 **training task당 별도의 expert LM train시키는 분산 접근 방식**은     
     * **(1)** instruction tuning 중 종종 발생하는 **negative task transfer을 피하는 것**을 포함하여 많은 이점을 가지고 있음을 보여준다       
-    * (2) catastrophic forgetting을 피하기 위해 previous tasks를 재교육하지 않고도 **새로운 tasks를 지속적으로 학습 가능**     
-    * (3) 개별 experts를 통합할 때 구성 능력(compositional capabilities)을 보여줌      
+    * **(2)** catastrophic forgetting을 피하기 위해 previous tasks를 재교육하지 않고도 **새로운 tasks를 지속적으로 학습 가능**     
+    * **(3)** 개별 experts를 통합할 때 구성 능력(compositional capabilities)을 보여줌      
 * 코드는 [링크](https://github.com/joeljang/ELM)에서 확인할 수 가능    
 
 
@@ -28,122 +28,74 @@
 
 
 # 1. Introduction
-Recent works show pretrained Language Models (LMs) that
-have been fine-tuned on multiple tasks with instructions
-(prompted instances), also known as multitask-prompted
-fine-tuned LMs and referred to as MT LMs in this work,
-can generalize to unseen tasks without task-specific finetuning (Wei et al., 2021; Sanh et al., 2021; Chung et al
-2022; Ye et al., 2022b; Ouyang et al., 2022; Wang et al.,
-2022a; Muennighoff et al., 2022). This paper raises some
-questions regarding the current paradigm of training MT
-LMs and is mainly divided into two parts. In Part 1, we
-report an unexpected finding regarding expert LMs (trained
-only on a single task) compared to MT LMs. In Part 2, we
-leverage the finding to highlight some of the benefits of
-expert LMs over MT LMs.
+
+**Recent works:**      
+최근의 연구는 multitask-prompted fine-tuned(본 연구에서MTLM라고 부름)가 multiple tasks(prompted instances)으로 여러 task에 대해 pretrained Language Models(LMs)이 task-specific finetuning 없이 unseen task로 generalize될 수 있음을 보여줌
+
+**본 논문의 구성**          
+본 논문은 **MTLM을 훈련하는 현재 패러다임과 관련하여 몇 가지 질문을 제기**하며 주로 두 부분으로 나뉨      
+* **Part 1:** MT LM과 비교하여 expert LM(a single task)과 관련하여 예상치 못한 발견을 보고      
+    * **single expert LM**을 MTLM에 사용한 300이상의 task 중 1개에 대해 훈련하면,     
+unseen task인 24개의 작업에서 사소한 차이로 MTLM을 능가할 수 있음을 보여줌.     
+➡ zero-shot inference을 위한 single MT LM 대신, **training task당 별도의 expert LM train시키는 분산 접근 방식**이 더 좋음    
+➡ 모든 task에 대해 단일 MT LM을 na¨ıvely하게 활용하는 것보다 올바른 전문가를 선택하는 것이 더 효율적이고 효과적인 접근 방식이 될 수 있음을 의미      
+* **Part 2:** MT LM에 비해 **expert LM의 이점**을 일부 강조하기 위해 이를 활용함      
+3가지 이점 강조    
+    * **1)** 
+    **MT LMs:** negative task transfer때문에 seen tasks에 대한 optimal performance 내지 못함    
+    **Expert LMs:** 각 **task가 독립적으로 학습**되어, negative task transfer이 없어 **성능이 더 좋음**            
+    * **2)** 
+    **MT LMs:** new tasks를 train할 때, catastrophic forgetting에 취약, 이를 완화하기위해 re-training on previous tasks 필요    
+    **Expert LMs:** re-training 없이도 좋은 성능을 보여줌   
+    * **3)**     
+    **MT LMs:** a single compositional instruction로 해당 instruction의 연결을 통해 composition of previously learned tasks의 구성을 수행하는 능력이 떨어짐    
+    **Expert LMs:** 이를 mT5-3B(Xue et al., 2021)와 결합하면, 5 novel compositional tasks (summarization & translation)에 대해 좋은 성능을 보임   
+    Details of the merging mechanism are provided in Section 3.3     
+    
+Cherry-picked
+output examples of the MT LM and the merged experts are
+provided in Table 8.
 
 
-
-Part 1 (Section 5) Previously, the key component to enhancing the unseen task generalization performance of MT
-LMs was thought to be scaling the total number of tasks
-used in training (Wei et al., 2021; Chung et al., 2022; Wang
-et al., 2022a). However, in this work, we show that training
-a single expert LM on one1 out of the 300+ tasks used to
-train an MT LM (T0-3B (Sanh et al., 2021)) can outperform
-the MT LM by a non-trivial margin on 24 unseen tasks on
-mean accuracy.
-
-
-Specifically, following the same experimental setup (training and evaluation) as T0-3B (Sanh et al., 2021), one of the
-most widely used MT LM, we first train expert LMs for
-each given training task (296) by freezing the underlying
-LM and updating adapters (Houlsby et al., 2019). We report
-a finding that shows 7 out of the 296 experts surpass T0-
-3B on the capability to generalize to unseen tasks on mean
-accuracy (shown in Figure 1). Using the top performing
-expert for all of the unseen task evaluation tasks surpasses
-T0-3B by a mean accuracy of 3.20% and 1.29% on 11 unseen datasets and 13 datasets of the BIG-Bench benchmark,
-respectively. We also show that applying a simple mechanism to retrieve relevant experts for each individual unseen
-task results in comparable performance to T0-3B. Considering the significant room for improvement when retrieving
-the best-performing expert for each unseen task (+11.94%
-compared to T0-3B), these results imply that choosing the
-right expert rather than na¨ıvely utilizing a single MT LM for
-all of the unseen tasks can be a more efficient and effective
-approach
+<img width="239" alt="image" src="https://github.com/yerimoh/img/assets/76824611/86ee64eb-f53b-4635-b1e2-90cbe1e34d9f">
 
 
 
 
-
-Part 2 (Section 6) Leveraging the finding of expert LMs
-showing improved unseen task generalization capability, we
-highlight three other advantages of training multiple expert
-LMs for each task and retrieving the relevant expert during
-inference (shown in Figure 2) compared to training MT
-LMs.
+------
 
 
-
-
-#1. MT LMs do not show the optimal performance for seen
-tasks because of negative task transfer, where learning multiple tasks at once hinders the learning of some specific
-tasks (Aghajanyan et al., 2021; Asai et al., 2022a; Zhang
-et al., 2022). Expert LMs, on the other hand, are not subject
-to negative task transfer (Levine et al., 2022) since each task
-is learned independently; We show our approach of selecting relevant experts during inference results in a +10.4%
-mean accuracy improvement on validation datasets of the
-36 training tasks compared to T0-3B.
-
-
-#2. MT LMs are susceptible to catastrophic forgetting (Mc
-Closkey & Cohen, 1989) of previous tasks when learning
-new tasks and require re-training on previous tasks to mitigate forgetting (Chakrabarty et al., 2022). Results show our
-distributed (training individual tasks in an independent manner) approach results in absolutely no degradation of seen
-tasks, even when adding the 8 new experts to the Expert
-Library, without re-training on previous tasks when learning
-8 new generative tasks.
+7. Limitations and Discussions
+While we highlight some of the major drawbacks of instruction tuning and propose an alternative approach of instead
+training and retrieving experts in this paper, we do not perform experimental results over MT LMS that have more
+than >11B parameters. For example, MT LMs with >11B
+parameters may be less susceptible to negative task transfer because of increased model capacity. Also, during the
+inference of unseen tasks, our retrieval mechanism assumes
+batch inference (i.e. having access to 32 samples of the target
+tasks without labels). Finally, when showing the compositional instruction experiments, we assume the two optimal
+experts could be retrieved from the compositional instruction (concatenation of the two seen instructions) given as
+the input along with the evaluation instance. This might not
+necessarily be the case with more complex, compositional
+instructions, which might require a separate decomposition
+stage. We instead focus on showing the possibility merging
+experts can bring and leave developing novel methods of
+retrieving the optimal experts during inference for future
+work.
 
 
 
-#3. We show that MT LMs show poor ability in performing
-composition of previously learned tasks given via concatenation of the corresponding instructions as a single compositional instruction. On the other hand, we show that
-merging the two experts trained on the individual tasks with
-mT5-3B (Xue et al., 2021) as the underlying pre-trained
-LM results in an expert that can outperform its MT LM
-counterpart, mT0-3B (Muennighoff et al., 2022), by a mean
-ROUGE-L score of +2.71 on 5 novel compositional tasks
-(summarization & translation). Details of the merging mechanism are provided in Section 3.3.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# 8. Conclusion
+In this work, we provide an interesting finding that expert
+LMs trained on single tasks show strong generalization capability to unseen tasks, even surpassing MT LMs trained on
+multiple tasks (300+) by a non-trivial margin. We leverage
+this capability and show three main benefits of training and
+retrieving experts for inference over MT LMs, demonstrating that our proposed distributed approach is more robust
+against negative task transfer, more adapt at learning new
+tasks, and can perform compositional instructions. To this
+end, we urge the research community to further explore
+distributed and collaborative training of experts which may
+have other future benefits including efficiency, privacy, and
+personalization not explicitly explored in this paper.
 
 
 
