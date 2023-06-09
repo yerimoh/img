@@ -346,4 +346,61 @@ psst 룰에 따르게 끔 되어 있습니다 그래서이 내용들을 가지�
 자 그래서 지금 기술사업화를 통해서 사업계획서 작성까지
 간단히 살펴보았습니다 그래서 시간이 되시면 한번씩들 더 보시면서 좋은
 공부가 되었으면 합니다네 이상 마치도록 하겠습니다
+
+
+
+Citations play a unique role in scientific discourse
+and are crucial for understanding and analyzing
+scientific work (Luukkonen, 1992; Leydesdorff,
+1998). They are also typically used as the main
+measure for assessing impact of scientific publications, venues, and researchers (Li and Ho,
+2008). The nature of citations can be different.
+Some citations indicate direct use of a method
+while some others merely serve as acknowledging a prior work. Therefore, identifying the intent of citations (Figure 1) is critical in improving
+automated analysis of academic literature and scientific impact measurement (Leydesdorff, 1998;
+Small, 2018). Other applications of citation intent classification are enhanced research experience (Moravcsik and Murugesan, 1975), information retrieval (Ritchie, 2009), summarization (Co-
+…. A previously described computerized force sensitive system was
+used to quantify gait cycle timing,
+specifically the swing time and the
+stride-to-stride variability of swing
+time (Bazner et al. 2000). ….
+Title: Gait asymmetry in patients
+with Parkinson’s disease and
+elderly fallers ...
+Citing paper
+method
+background
+Bazner et al. 2000
+Springer et al. 2006
+Cited papers
+… Further details are included in the
+earlier reports (Springer et al. 2006).
+….
+Figure 1: Example of citations with different intents
+(BACKGROUND and METHOD).
+han and Goharian, 2015), and studying evolution
+of scientific fields (Jurgens et al., 2018).
+In this work, we approach the problem of citation intent classification by modeling the language expressed in the citation context. A citation context includes text spans in a citing paper describing a referenced work and has been
+shown to be the primary signal in intent classification (Teufel et al., 2006; Abu-Jbara et al., 2013;
+Jurgens et al., 2018). Existing models for this
+problem are feature-based, modeling the citation
+context with respect to a set of predefined handengineered features (such as linguistic patterns or
+cue phrases) and ignoring other signals that could
+improve prediction.
+In this paper we argue that better representations can be obtained directly from data, sidestepping problems associated with external features.
+To this end, we propose a neural multitask learning framework to incorporate knowledge into citations from the structure of scientific papers. In
+particular, we propose two auxiliary tasks as structural scaffolds to improve citation intent prediction:1
+(1) predicting the section title in which the
+citation occurs and (2) predicting whether a sentence needs a citation. Unlike the primary task of
+citation intent prediction, it is easy to collect large
+amounts of training data for scaffold tasks since
+the labels naturally occur in the process of writing a paper and thus, there is no need for manual
+annotation. On two datasets, we show that the proposed neural scaffold model outperforms existing
+methods by large margins.
+Our contributions are: (i) we propose a neural scaffold framework for citation intent classification to incorporate into citations knowledge
+from structure of scientific papers; (ii) we achieve
+a new state-of-the-art of 67.9% F1 on the ACLARC citations benchmark, an absolute 13.3% increase over the previous state-of-the-art (Jurgens
+et al., 2018); and (iii) we introduce SciCite, a new
+dataset of citation intents which is at least five
+times as large as existing datasets and covers a variety of scientific domains
    
