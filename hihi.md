@@ -13,11 +13,16 @@ exist in a social world that constantly confronts us with the
 our own activity, including creative activity. This outside
 perspective is essential for creativity because it gives new
 meaning and value to the creative act and its product. [3점]
-* artifact: 창작물
-① exploring the absolute truth in existence
+
+* artifact: 창작물    
+① exploring the absolute truth in existence    
+
 ② following a series of precise and logical steps
+
 ③ looking outside and drawing inspiration from nature
+
 ④ internalizing the perspective of others on one’s work
+
 ⑤ pushing the audience to the limits of its endurance
 
 2017 3월 서울 33번
@@ -33,10 +38,15 @@ they advertise. In this way, they can promote a favorable
 comparison with similar products or differentiate a product
 from its competitors. Likewise, the map must remove details
 that would be confusing. [3점]
+
 ① reducing the amount of information
+
 ② telling or showing everything
+
 ③ listening to people’s voices
+
 ④ relying on visual images only
+
 ⑤ making itself available to everyone
 
 2020 6월 부산 33번
@@ -54,11 +64,17 @@ where my client’s language and most of his body revealed
 nothing but positive feelings. His feet, however, were
  , and they clearly told me
 that as much as he wanted to stay, duty was calling. [3점]
+
 * collegial: 평등하게 책임을 지는
+
 ① a signal of his politeness
+
 ② the subject of the conversation
+
 ③ expressing interest in my words
+
 ④ the most honest communicators
+
 ⑤ stepping excitedly onto the grou
 
 
@@ -76,11 +92,17 @@ got busy and forgot to take pictures at all. Very few of us have a complete phot
 Sometimes you get very clear pictures of the past, while at
 other times there are big gaps, and you need to notice what
 they are. [3점]
+
 * decompose: 부패하다
+
 ① tell the entire story
+
 ② require further study
+
 ③ teach us a wrong lesson
+
 ④ change their original traits
+
 ⑤ make room for imagination
 
 
@@ -103,11 +125,17 @@ will eventually be forced to provide incentives in order to
 encourage consumers to watch their messages. These
 incentives may come in the form of coupons, or a reduction
 in the cable bill for each advertisement watched. [3점]
+
 * mute: 음소거하다
+
 ① guide people to be wise consumers
+
 ② reduce the cost of television advertising
+
 ③ keep a close eye on the quality of products
+
 ④ make it possible to deliver any goods any time
+
 ⑤ win the battle for broadcast advertising exposure
 
 
@@ -130,11 +158,17 @@ trade, for example, we might assume that the world consists
 of only two countries and that each country produces only two
 goods. By doing so, we can _________________________________. Thus, we are in a better position to understand international
 trade in the complex world. [3점]
+
  * negligible: 무시할 수 있는
+ 
  ① prevent violations of consumer rights
+ 
  ② understand the value of cultural diversity
+ 
  ③ guarantee the safety of experimenters in labs
+ 
  ④ focus our thinking on the essence of the problem
+ 
  ⑤ realize the differences between physics and economics
 
 
@@ -154,10 +188,15 @@ time. Very often this reveals itself in unconscious movements,
 such as playing with something in one’s hands or pacing around
 the room; and if such an action also serves to increase
 pleasure or relieve displeasure, all the better. * supplement: 보충하다
+
 ① to please others with what we are good at
+
 ② to pay more attention to the given task
+
 ③ to find outlets for our unused attention
+
 ④ to play with a stronger opponent
+
 ⑤ to give our brain a short break
 
 
@@ -177,11 +216,17 @@ space trying to figure out their real feelings, their mood of the
 moment, and their fleeting motivations. It is best to
 from their shifting
 emotions so that you are not caught up in the process. [3점]
+
 * fleeting: 빨리 지나가는
+
 ① cultivate both distance and a degree of detachment
+
 ② find out some clues or hints to their occupation
+
 ③ learn to be more empathetic for them
+
 ④ discover honesty in their character
+
 ⑤ relieve their anxiety and worries
 
 
