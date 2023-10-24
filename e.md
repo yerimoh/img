@@ -1,13 +1,12 @@
-Of the many forest plants that can cause poisoning, wild
-mushrooms may be among the most dangerous. ① This is
-because people sometimes confuse the poisonous and edible
-varieties, or they eat mushrooms without making a positive
-identification of the variety. ② Many people enjoy hunting
-wild species of mushrooms in the spring season, because
-they are excellent edible mushrooms and are highly prized.
-③However, some wild mushrooms are dangerous, leading people
-to lose their lives due to mushroom poisoning. ④Growing a
-high­quality product at a reasonable cost is a key aspect to
-farming edible mushrooms for profit. ⑤To be safe, a person
-must be able to identify edible mushrooms before eating any
-wild one.
+Wouldn’t it be nice if you could take your customers by the
+hand and guide each one through your store while pointing out
+all the great products you would like them to consider buying?
+① Most people, however, would not particularly enjoy
+having a stranger grab their hand and drag them through a
+store. ② Rather, let the store do it for you. ③ Have a central
+path that leads shoppers through the store and lets them look at
+many different departments or product areas. ④ You can use
+this effect of music on shopping behavior by playing it in the
+store. ⑤ This path leads your customers from the entrance
+through the store on the route you want them to take all the
+way to the checkout.
