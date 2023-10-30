@@ -1,14 +1,12 @@
-Public speaking is audience centered because speakers
-“listen” to their audiences during speeches. They monitor
-audience feedback, the verbal and nonverbal signals an
-audience gives a speaker. ① Audience feedback often
-indicates whether listeners understand, have interest in, and
-are ready to accept the speaker’s ideas. ② This feedback
-assists the speaker in many ways. ③ It helps the speaker
-know when to slow down, explain something more carefully,
-or even tell the audience that she or he will return to an
-issue in a question­and­answer session at the close of the
-speech. ④ It is important for the speaker to memorize his or
-her script to reduce on­stage anxiety. ⑤ Audience feedback
-assists the speaker in creating a respectful connection with
-the audience.
+Words like ‘near’ and ‘far’ can mean different things
+depending on where you are and what you are doing. If you
+were at a zoo, then you might say you are ‘near’ an animal
+if you could reach out and touch it through the bars of its
+cage. ① Here the word ‘near’ means an arm’s length away.
+② If you were telling someone how to get to your local
+shop, you might call it ‘near’ if it was a five­minute walk
+away. ③ It seems that you had better walk to the shop to
+improve your health. ④ Now the word ‘near’ means much
+longer than an arm’s length away. ⑤ Words like ‘near’, ‘far’,
+‘small’, ‘big’, ‘hot’, and ‘cold’ all mean different things to
+different people at different times.
