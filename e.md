@@ -1,12 +1,13 @@
-Words like ‘near’ and ‘far’ can mean different things
-depending on where you are and what you are doing. If you
-were at a zoo, then you might say you are ‘near’ an animal
-if you could reach out and touch it through the bars of its
-cage. ① Here the word ‘near’ means an arm’s length away.
-② If you were telling someone how to get to your local
-shop, you might call it ‘near’ if it was a five­minute walk
-away. ③ It seems that you had better walk to the shop to
-improve your health. ④ Now the word ‘near’ means much
-longer than an arm’s length away. ⑤ Words like ‘near’, ‘far’,
-‘small’, ‘big’, ‘hot’, and ‘cold’ all mean different things to
-different people at different times.
+Training and conditioning for baseball focuses on developing
+strength, power, speed, quickness and flexibility. ① Before the
+1980s, strength training was not an important part of
+conditioning for a baseball player. ② People viewed baseball as
+a game of skill and technique rather than strength, and most
+managers and coaches saw strength training as something for
+bodybuilders, not baseball players. ③ Unlike more isolated
+bodybuilding exercises, athletic exercises train as many muscle
+groups and functions as possible at the same time. ④ They feared
+that weight lifting and building large muscles would cause players
+to lose flexibility and interfere with quickness and proper
+technique. ⑤ Today, though, experts understand the importance
+of strength training and have made it part of the game
