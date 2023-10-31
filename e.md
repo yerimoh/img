@@ -396,7 +396,19 @@ makes sense to countless people. Since the people reading them want to
 believe the information so badly, they will search for meaning in
 their lives that make it true.
 
-
+바넘 효과는 누군가가 매우 일반적인 것을
+읽거나 듣지만 그것이 자신에게 적용된다고 믿는 현
+상이다. 이러한 진술들은 표면적으로는 매우 개인적
+인 것처럼 보이지만 실제로는 많은 사람에게 적용된
+다. 인간 심리는 우리가 개인적 차원에서 동일시할
+수 있는 것을 믿고, 나머지에 대해서는 우리의 상상
+으로 공백을 채우면서 그것(정보)이 반드시 존재하
+지는 않는 경우에도 정보를 심지어 찾고 싶어 하게
+한다. 이것은 개인적인 것처럼 보이지만 수많은 사람
+에게 대개 들어맞는 정보를 제공하는 별자리 운세가
+의존하는 원리이다.  그것들을 읽는 사람들이 그 정
+보를 너무나도 믿고 싶어 하기 때문에 그들은 그것
+을 사실로 만드는 삶에서 의미를 찾을 것이다.
 
 
 
@@ -446,12 +458,128 @@ Rudolf Virchow와 같은 의사들은 열악한 주거 환경, 인
 
 
 21년	9월	35
+
+The Zeigarnik effect is commonly referred to as the
+tendency of the subconscious mind to remind you of a task
+that is incomplete until that task is complete. Bluma Zeigarnik
+was a Lithuanian psychologist who wrote in the 1920s about
+the effects of leaving tasks incomplete. ① She noticed the
+effect while watching waiters serve in a restaurant. ② The
+waiters would remember an order, however complicated, until
+the order was complete, but they would later find it difficult
+to remember the order. ③ Zeigarnik did further studies giving
+both adults and children puzzles to complete then interrupting
+them during some of the tasks. The
+results showed that both adults and children remembered the
+tasks that hadn’t been completed because of the interruptions
+better than the ones that had been completed.
+
+Zeigarnik 효과는 보통 당신에게 그 과업이
+끝날 때까지 끝나지 않은 과업을 상기시켜주는 잠
+재적인 마음의 경향을 의미한다. Bluma Zeigarnik
+는 1920년대에 과업을 완성하지 못한 채로 남겨두
+는 것이 주는 효과에 대해 쓴 리투아니아 심리학자
+이다. 그녀는 그 효과를 알아차렸는데 한 식당에서
+웨이터들이 서빙하는 것을 보고 있을 때였다. 그 웨
+이터들은 아무리 복잡하더라도 그 주문이 끝날 때
+까지 주문을 기억했는데, 그들은 나중에는 그 주문
+을 기억하는 것이 어렵다는 것을 알았다. Zeigarnik
+는 어른들과 아이들 둘 다에게 완성할 퍼즐을 주고
+그 과업들 중에 몇몇을 하는 도중에 그들을 방해를
+하는 더 깊은 연구를 했다.  그 결과들은 어른들과 아이들 둘 다 방해로
+인해 완성되지 못한 과업들을 완성된 것들보다 더
+잘 기억했다는 것을 보여주었다. 
+
+
 21년	11월	35
+
+Internet activist Eli Pariser noticed how online search
+algorithms encourage our human tendency to grab hold of
+everything that confirms the beliefs we already hold, while quietly
+ignoring information that doesn’t match those beliefs. ①We set up
+a so-called “filter-bubble” around ourselves, where we are
+constantly exposed only to that material that we agree with. ②We
+are never challenged, never giving ourselves the opportunity to
+acknowledge the existence of diversity and difference.  ④In the best case, we
+become naive and sheltered, and in the worst, we become
+radicalized with extreme views, unable to imagine life outside our
+particular bubble. ⑤The results are disastrous: intellectual
+isolation and the real distortion that comes with believing that the
+little world we create for ourselves is the world.
+
+
+
+인터넷 활동가인 는 온라인 검색 Eli Pariser
+알고리즘이 우리가 이미 갖고 있는 신념이 옳음을
+확인해 주는 모든 것을 움켜쥐고 반면에 그러한 신 ,
+념과 맞지 않는 정보는 조용히 무시하는 우리의 인
+간 경향성을 어떻게 조장하는지에 주목했다 우리는 .
+자신의 주변에 소위 필터 버블 을 설치하는데 그곳 産 疝
+에서 우리는 자신이 동의하는 그 자료에만 끊임없이
+노출된다 우리는 결코 이의를 제기 받지 않으며 스 .
+스로에게 다양성과 차이의 존재를 인정할 기회를 주
+지 않는다.  최상의 경우 우리는 세상을 모르
+고 보호 받으며 최악의 경우 우리는 극단적인 시각 ,
+으로 과격화되며 우리의 특정 버블 밖의 삶을 상상
+할 수 없게 된다 그 결과는 참담하여 예를 들면 지 . ,
+적 고립과 우리가 스스로 만드는 작은 세계가 전産 疝
+세계라고 믿게 되어 따라오는 진정한 왜곡이 있다
+
+
+
+
+
 22년	3월	35
+
+Who hasn’t used a cup of coffee to help themselves stay awake while studying? Mild stimulants commonly
+found in tea, coffee, or sodas possibly make you more attentive and, thus, better able to remember.
+However, you should know that stimulants are as likely to have negative effects on memory as they
+are to be beneficial. Even if they could improve performance at some level, the ideal doses are currently
+unknown. If you are wide awake and well­rested, mild stimulation from caffeine can do little to further
+improve your memory performance. Indeed, if you have too much of a stimulant, you will become
+nervous, find it difficult to sleep, and your memory performance will suffer.
+
+공부하는 동안 깨어 있는 것을 돕기 위해 커피 한 잔을 이용해 보지 않은 사람이 있을까? 차, 커피 또는 탄산음료에서 흔히 발견되는
+가벼운 자극제는 여러분을 더 주의 깊게 만들고, 따라서 더 잘 기억할 수 있게 한다. 하지만, 자극제가 기억력에 이로울 수 있는 만큼
+부정적인 영향을 미칠 수도 있다는 것을 여러분은 알아야 한다. 비록 그것이 특정 수준에서 수행을 향상할 수 있다고 할지라도, (자극
+제의) 이상적인 복용량은 현재 알려지지 않았다. 만약 여러분이 완전히 깨어 있고 잘 쉬었다면, 카페인으로부터의 가벼운 자극은 여러
+분의 기억력을 더욱 향상하는 데 거의 영향을 주지 못할 수 있다. 실제로 만약 여러분이 자극제를 너무 많이 섭취하면, 신경이 과민해
+지고, 잠을 자기 어려워지며, 기억력도 저하될 것이다.
+
+
 22년	6월	35
+
+According to Marguerite La Caze, fashion contributes to our lives and provides a medium for us to
+develop and exhibit important social virtues. Fashion may be beautiful, innovative, and useful; we can
+display creativity and good taste in our fashion choices. And in dressing with taste and care, we
+represent both self­respect and a concern for the pleasure of others. There is no doubt that fashion
+can be a source of interest and pleasure which links us to each other. That is, fashion provides a
+sociable aspect along with opportunities to imagine oneself differently ― to try on different identities.
+
+
+Marguerite La Caze에 따르면, 패션은 우리의 삶에 기여하고 우리가 중요한 사회적 가치를 개발하고 나타내는 수단을 제공한다. 패션은
+아름다울 수 있고, 혁신적일 수 있으며, 유용할 수 있다. 우리는 패션을 선택하는데 있어서 창의성과 좋은 취향을 드러낼 수 있다. 그리
+고 취향과 관심에 따라 옷을 입을 때, 우리는 자아존중과 타인의 즐거움에 대한 관심 모두를 보여준다. 의심할 여지없이, 패션은 우리와
+타인을 연결해 주는 흥미와 즐거움의 원천이 될 수 있다. 다시 말해, 패션은 자신을 다르게 상상하는, 즉, 다른 정체성을 시도하는 기회
+와 더불어 친교적인 측면을 제공한다.
+
+
 22년	9월	35
 
+The fast­paced evolution of Information and Communication Technologies (ICTs) has radically
+transformed the dynamics and business models of the tourism and hospitality industry. This leads to
+new levels/forms of competitiveness among service providers and transforms the customer experience
+through new services. Creating unique experiences and providing convenient services to customers
+leads to satisfaction and, eventually, customer loyalty to the service provider or brand (i.e., hotels).
+In particular, the most recent technological boost received by the tourism sector is represented by
+mobile applications. Indeed, empowering tourists with mobile access to services such as hotel
+reservations, airline ticketing, and recommendations for local attractions generates strong interest
+and considerable profits.
 
+
+정보와 의사소통 기술(ICTs)의 빠른 속도의 진화는 관광업과 서비스업의 역동성과 비즈니스 모델을 급격하게 변화시켜 왔다. 이것은 서
+비스 제공자 간 새로운 수준/형식의 경쟁으로 이어지고, 새로운 서비스를 통해 고객 경험을 변화시킨다. 독특한 경험을 만드는 것과 고
+객에게 편리한 서비스를 제공하는 것은 만족감과, 결국에는, 서비스 제공자나 브랜드(즉, 호텔)에 대한 고객 충성도로 이어진다. 특히, 관광업 분야에서 받아들여진 가장 최근의 기술적 상승은 모바일 애플리케이션에 의해 대표된다. 사실, 관광객에게 호텔 예약, 항공권 발권, 그리고 지역 관광지를 추천하는 것과 같은 서비스에 대한 모바일 접근 권한을 주는 것은 강력한 흥미와 상당한 수익을 만들어 낸다.
 
 
 
