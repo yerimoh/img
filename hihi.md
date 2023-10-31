@@ -809,9 +809,323 @@ threat by becoming more information literate.
 
 
 
-21년	9월		36	37
-21년	11월		36	37
-22년	3월		36	37
-22년	6월		36	37
-22년	9월		36	37
+21년	9월		36	
+
+Understanding how to develop respect for and a
+knowledge of other cultures begins with reexamining the
+golden rule: “I treat others in the way I want to be treated.”
+(C) This rule makes sense on some level; if we treat
+others as well as we want to be treated, we will be
+treated well in return. This rule works well in a
+monocultural setting, where everyone is working within
+the same cultural framework.
+(B) In a multicultural setting, however, where words, gestures,
+beliefs, and views may have different meanings, this rule
+has an unintended result; it can send a message that my
+culture is better than yours.
+(A) It can also create a frustrating situation where we
+believe we are doing what is right, but what we are
+doing is not being interpreted in the way in which it was
+meant. This miscommunication can lead to problems.
+
+
+] 다른 문화에 대한 존중과 지식을 발달시키
+는 방법을 이해하는 것은 다음과 같은 황금률을
+재점검해보는 일에서 시작된다. “나는 당신을 내
+가 대접받고 싶은 방식대로 대접합니다.” (C) 이
+법칙은 어느 수준에서는 말이 된다. 만약 우리가
+다른 사람들을 대접받고 싶은 만큼 대접한다면 우
+리는 보답으로 잘 대접받게 될 것이다. 이 법칙은
+모든 사람이 같은 문화적 틀 안에서 일하는 단일
+문화 환경에서는 잘 통한다. (B) 그러나 단어, 제
+스처, 신념과 관점이 다른 의미를 지닐지도 모르
+는 다문화 환경에서는 이 법칙이 의도치 않은 결
+과를 낳는다. 그것은 나의 문화가 너의 것보다 낫
+다는 메시지를 줄 수 있다. (A) 그것은 또한 우리
+가 하는 것이 옳다고 믿지만, 그것이 의도된 방식
+으로 해석되지 않는 답답한 상황을 낳을 수도 있
+다. 이러한 의사소통 오류는 문제를 야기할 수 있
+다.
+
+
+21년	9월		37
+
+In a study, a researcher pretending to be a volunteer
+surveyed a California neighborhood, asking residents if
+they would allow a large sign reading ‘‘Drive Carefully’’ to
+be displayed on their front lawns.
+(C) To help them understand what it would look like, the
+volunteer showed his participants a picture of the large
+sign blocking the view of a beautiful house. Naturally,
+most people refused, but in one particular group, an
+incredible 76 percent actually approved.
+(A) The reason that they agreed was this: two weeks
+earlier, these residents had been asked by another
+volunteer to make a small commitment to display a tiny
+sign that read ‘‘Be a Safe Driver’’ in their windows.
+(B) Since it was such a small and simple request, nearly all of
+them agreed. The astonishing result was that the initial
+small commitment deeply influenced their willingness to
+accept the much larger request two weeks later.
+
+
+
+한 연구에서, 자원봉사자로 가장한 연구원
+이 한 캘리포니아 동네에서 주민들에게 그들의 앞
+마당에 “운전 조심”이라고 쓰인 큰 표지판을 세워
+두는 것을 허락할지를 설문조사했다. (C) 그것이
+어떻게 보일지에 대한 그들의 이해를 돕기 위해, 그 자원봉사자는 참여자들에게 아름다운 집의 전
+망을 막는 큰 표지판 사진을 보여주었다. 당연하
+게도, 대부분의 사람들은 거절했지만, 한 특정 그
+룹에서, 놀랍게도 76퍼센트가 실제로 승낙했다. (A) 그들이 동의한 이유는 이것이다. 2주 전에, 이 주민들은 다른 자원봉사자로부터 “안전운전자
+가 되세요”라고 쓰인 아주 작은 표지판을 그들의
+창문에 붙인다는 작은 약속을 하도록 요청받은 적
+이 있었다. (B) 그것이 아주 작고 간단한 요청이
+었기 때문에, 그들 거의 모두가 동의했다. 놀라운
+결과는, 처음의 작은 약속이 그들이 2주 후의 훨
+씬 더 큰 요청을 기꺼이 받아들이는 데 깊은 영향
+을 끼쳤다는 것이다
+
+
+21년	11월		36	
+
+
+Roughly twenty years ago, brick-and-mortar stores
+began to give way to electronic commerce. For good or bad,
+the shift fundamentally changed consumers’ perception of the
+shopping experience.
+(B) Nowhere was the shift more obvious than with book sales,
+which is how online bookstores got their start. Physical
+bookstores simply could not stock as many titles as a
+virtual bookstore could. There is only so much space
+available on a shelf.
+(C) In addition to greater variety, online bookstores were also
+able to offer aggressive discounts thanks to their lower
+operating costs. The combination of lower prices and
+greater selection led to the slow, steady rise of online
+bookstores.
+(A) Before long, the e-commerce book market naturally
+expanded to include additional categories, like CDs and
+DVDs. E-commerce soon snowballed into the enormous
+industry it is today, where you can buy everything from
+toilet paper to cars online.
+
+대략 년 전 오프라인 거래 상점이 전자 상 20
+거래로 바뀌기 시작했다 좋든 나쁘든 간에 그 변화 .
+는 쇼핑 경험에 대한 소비자의 인식을 근본적으로
+바꾸었다. (B) 그 변화가 책 판매보다 더 분명한 곳
+은 없었는데 그것이 온라인 서점이 시작된 방식이다.
+물리적인 서점은 가상 서점이 할 수 있는 만큼 많은
+서적을 구비할 수 없었다 책꽂이 위의 활용 가능한 .
+공간은 딱 그 정도밖에 없다. (C) 더 많은 다양성뿐
+만 아니라 온라인 서점은 그들의 더 낮은 운영비 덕
+분에 공격적인 할인을 또한 제공할 수 있었다 더 낮 .
+은 가격과 더 많은 선택의 결합은 온라인 서점의 느
+리지만 꾸준한 상승으로 이어졌다. (A) 머지않아 전
+자 상거래 책 시장은 와 같은 추가적인 항 CD DVD
+목을 포함하도록 자연스럽게 확장되었다 전자 상거 .
+래는 곧 오늘날의 거대 산업으로 눈덩이처럼 불어났
+고 그곳에서 여러분은 화장실 휴지에서 자동차까지
+모든 것을 온라인으로 살 수 있다.
+
+
+
+
+
+
+21년	11월		37
+
+
+Literary works, by their nature, suggest rather than
+explain; they imply rather than state their claims boldly and
+directly.
+(C) This broad generalization, however, does not mean that
+works of literature do not include direct statements.
+Depending on when they were written and by whom,
+literary works may contain large amounts of direct telling
+and lesser amounts of suggestion and implication.
+(B) But whatever the proportion of a work’s showing to telling,
+there is always something for readers to interpret. Thus
+we ask the question “What does the text suggest?” as a
+way to approach literary interpretation, as a way to begin
+thinking about a text’s implications.
+(A) What a text implies is often of great interest to us. And
+our work of figuring out a text’s implications tests our
+analytical powers. In considering what a text suggests, we
+gain practice in making sense of texts.
+
+
+
+
+ 문학 작품들은 그 본질상 설명하기보다는 암
+시하는데 그들은 그들의 주장을 뚜렷하고 직접적으 ,
+로 진술하기보다는 함축한다. (C) 그러나 이 넓은 일
+반화는 문학 작품들이 직접적인 진술을 포함하지 않
+는다는 것을 의미하지는 않는다 그들이 언제 그리고 .
+누구에 의해 쓰였는지에 따라 문학 작품들은 많은
+양의 직접적 말하기와 더 적은 양의 암시와 함축을
+포함할 수도 있다. (B) 하지만 작품의 말하기 대 보
+여 주기의 비율이 어떻든지 간에 독자가 해석해야
+하는 무언가가 항상 존재한다 그러므로 우리는 문학 .
+적 해석에 접근하는 방법이자 텍스트의 함축에 대해
+생각하는 것을 시작하는 방법으로써 그 텍스트가 , 酸
+무엇을 암시하는가 라는 질문을 한다 ?霰 . (A) 텍스트가
+무엇을 함축하는지는 종종 우리에게 매우 흥미롭다.
+그리고 텍스트의 함축을 알아내는 우리의 작업은 우
+리의 분석적 능력을 시험한다 텍스트가 무엇을 암시 .
+하는지를 고려하는 과정에서 우리는 텍스트를 이해
+하는 기량을 얻게 된다.
+
+
+
+
+
+
+
+22년	3월		36	
+
+
+Toward the end of the 19th century, a new architectural attitude emerged. Industrial architecture,
+the argument went, was ugly and inhuman; past styles had more to do with pretension than what
+people needed in their homes. Instead of these approaches, why not look at the way ordinary country
+builders worked in the past? They developed their craft skills over generations, demonstrating mastery
+of both tools and materials. Those materials were local, and used with simplicity — houses built this
+way had plain wooden floors and whitewashed walls inside. But they supplied people’s needs perfectly
+and, at their best, had a beauty that came from the craftsman’s skill and the rootedness of the house
+in its locality.
+
+
+19세기 말이 되면서, 새로운 건축학적 사고방식이 나타났다. 그 주장에 따르면, 산업 건축은 추하고 비인간적이었다. 다른 한편으로 과
+거의 스타일은 사람들이 그들의 집에서 필요했던 것보다는 허세와 더욱 관련이 있었다. 이러한 접근 대신에, 평범한 시골 건축업자들이
+과거에 일했던 방식을 살펴보는 것은 어떠한가? 그들은 도구와 재료 둘 다에 숙달한 기술을 보이며, 세대를 거쳐 공예 기술을 발전시켰
+다. 그 재료는 지역적이고, 단순하게 사용되었는데, 이러한 방식으로 건축된 집들은 실내가 평범한 나무 바닥과 회반죽을 칠한 벽으로
+되어 있었다. 그러나 그것들은 사람들의 필요를 완벽하게 충족시켰고, 가장 잘 된 경우에는, 장인의 솜씨와 그 집의 지역에 뿌리내림에
+서 비롯된 아름다움을 갖추고 있었다.
+
+
+
+22년	3월		37
+
+Robert Schumann once said, “The laws of morals are those of art.” What the great man is saying
+here is that there is good music and bad music. The greatest music, even if it’s tragic in nature,
+takes us to a world higher than ours; somehow the beauty uplifts us. Bad music, on the other hand,
+degrades us. It’s the same with performances: a bad performance isn’t necessarily the result of incompetence.
+Some of the worst performances occur when the performers, no matter how accomplished, are thinking
+more of themselves than of the music they’re playing. These doubtful characters aren’t really listening
+to what the composer is saying — they’re just showing off, hoping that they’ll have a great ‘success’
+with the public. The performer’s basic task is to try to understand the meaning of the music, and then
+to communicate it honestly to others.
+
+Robert Schumann은 “도덕의 법칙은 예술의 법칙이다.”라고 말한 적이 있다. 여기서 이 위인이 말하고 있는 것은 좋은 음악과 나쁜 음
+악이 있다는 것이다. 가장 위대한 음악은, 심지어 그것이 사실상 비극적일 지라도, 우리의 세상보다 더 높은 세상으로 우리를 데려간다.
+그래서 어떻게든지 아름다움은 우리를 향상한다. 반면에 나쁜 음악은 우리를 격하시킨다. 연주도 마찬가지다. 나쁜 연주가 반드시 무능
+의 결과는 아니다. 최악의 연주 중 일부는 연주자들이 아무리 숙달 되었더라도 연주하고 있는 곡보다 자기 자신을 더 생각하고 있을
+때 발생한다. 이 미덥지 못한 사람들은 작곡가가 말하는 것을 정말로 듣고 있는 것이 아니다. 그들은 대중적으로 큰 ‘성공’을 거두기를
+바라며 그저 뽐내고 
+
+
+22년	6월		36	
+
+Mrs. Klein told her first graders to draw a picture of something to be thankful for. She thought
+that most of the class would draw turkeys or Thanksgiving tables. But Douglas drew something
+different. Douglas was a boy who usually spent time alone and stayed around her while his classmates
+went outside together during break time. What the boy drew was a hand. But whose hand? His image
+immediately attracted the other students’ interest. So, everyone rushed to talk about whose hand it was.
+“It must be the hand of God that brings us food,” said one student. “A farmer’s,” said a second student,
+“because they raise the turkeys.” “It looks more like a police officer’s,” added another, “they protect us.”
+The class was so responsive that Mrs. Klein had almost forgotten about Douglas. After she had the
+others at work on another project, she asked Douglas whose hand it was. He answered softly, “It’s
+yours. Thank you, Mrs. Klein.”
+
+
+Klein 선생님은 1학년 학생들에게 감사히 여기는 것을 그려보라고 말했다. 그녀는 반 아이들 대부분이 칠면조나 추수감사절 식탁을 그
+릴 것으로 생각했다. 하지만 Douglas는 색다른 것을 그렸다. 그의 반 친구들이 쉬는 시간에 함께 밖으로 나가 있는 동안, 보통 Douglas
+는 혼자 시간을 보내고 그녀 주변에 머무르는 소년이었다. 그 소년이 그린 것은 손이었다. 그런데 누구의 손일까? 그의 그림은 즉시 다
+른 학생들의 관심을 끌었다. 그래서, 모두들 그것이 누구의 손인지에 관해 앞다투어 말하려 했다. “그것은 우리에게 음식을 가져다주는
+신의 손이 틀림없어.”라고 한 학생이 말했다. “농부의 손이야, 왜냐하면 그들은 칠면조를 기르거든.” 이라고 두 번째 학생이 말했다. “경
+찰관의 손과 더 비슷해 보여, 그들은 우리를 보호해줘.”라고 또 다른 학생 이 덧붙였다. 반 아이들의 호응에 Klein 선생님은 Douglas에
+대해 하마터면 잊어버릴 뻔했다. 그녀는 나머지 아이들에게 다른 과제를 하도록 지도한 후, Douglas에게 그 손이 누구의 것인지 물었
+다. “선생님 손이에요. 고마워요, Klein 선생님.”이라고 그는 조용히 대답했다.
+
+
+
+
+22년	6월		37
+
+According to legend, once a vampire bites a person, that person turns into a vampire who seeks the
+blood of others. A researcher came up with some simple math, which proves that these highly popular
+creatures can’t exist. University of Central Florida physics professor Costas Efthimiou’s work breaks
+down the myth. Suppose that on January 1st, 1600, the human population was just over five hundred
+million. If the first vampire came into existence that day and bit one person a month, there would
+have been two vampires by February 1st, 1600. A month later there would have been four, the next
+month eight, then sixteen, and so on. In just two­and­a­half years, the original human population
+would all have become vampires with no humans left. But look around you. Have vampires taken
+over the world? No, because there’s no such thing.
+
+
+전설에 따르면, 흡혈귀가 사람을 물면 그 사람은 다른 사람의 피를 갈구하는 흡혈귀로 변한다. 한 연구자가 이 잘 알려진 존재가 실존
+할 수 없다는 것을 증명하는 간단한 계산법을 생각해냈다. University of Central Florida의 물리학과 교수 Costas Efthimiou의 연구가 그
+미신을 무너뜨렸다. 우선, 1600년 1월 1일에 인구가 5억 명이 넘는다고 가정해 보자. 그날 최초의 흡혈귀가 생겨나서 한 달에 한 명을
+물었다면, 1600 년 2월 1일까지 흡혈귀가 둘 있었을 것이다. 한 달 뒤 면 넷, 그 다음 달은 여덟, 그리고 열여섯 등등으로 계속 늘어나
+는 것이다. 불과 2년 반 만에, 원래의 인류는 모두 흡혈귀가 되어 더 이상 남아있지 않았을 것이다. 하지만 주위를 둘러보아라. 흡혈귀
+가 세상을 정복하였는가? 아니다. 왜냐하면 흡혈귀는 존재하지 않으니까.
+
+
+
+
+
+
+
+
+
+22년	9월		36	
+
+With nearly a billion hungry people in the world, there is obviously no single cause. However, far
+and away the biggest cause is poverty. Seventy­nine percent of the world’s hungry live in nations
+that are net exporters of food. How can this be? The reason people are hungry in those countries
+is that the products produced there can be sold on the world market for more than the local
+citizens can afford to pay for them. In the modern age you do not starve because you have no
+food, you starve because you have no money. So the problem really is that food is, in the grand
+scheme of things, too expensive and many people are too poor to buy it. The answer will be in
+continuing the trend of lowering the cost of food.
+
+
+전 세계에 거의 10억 명의 굶주린 사람들이 있는데, 이에 대해 분명 원인이 단 하나만 있는 것은 아니다. 그렇지만, 가장 큰 원인은 단
+연 빈곤이다. 세계의 굶주린 사람들의 79퍼센트가 식량 순 수출국에 살고 있다. 어떻게 이럴 수가 있을까? 그러한 국가에서 사람들이
+굶주리는 이유는 그곳에서 생산된 산물들이 현지 시민들이 그것들에 지불할 수 있는 것보다 더 비싸게 세계 시장에서 팔릴 수 있기 때
+문이다. 현대에는 여러분이 식량이 없어서 굶주리는 것이 아니라, 돈이 없어서 굶주리는 것이다. 그래서 문제는 실로 식량이 거대한 체
+계로 볼 때, 너무 비싸고 많은 사람들은 너무 가난하여 그것을 구매할 수 없다는 것이다. 해답은 식량의 가격을 낮추는 추세를 지속하
+는 데 있을 것이다. 
+
+
+
+
+
+22년	9월  	37
+
+
+
+Most people have a perfect time of day when they feel they are at their best, whether in the
+morning, evening, or afternoon. Some of us are night owls, some early birds, and others in between
+may feel most active during the afternoon hours. If you are able to organize your day and divide
+your work, make it a point to deal with tasks that demand attention at your best time of the day.
+However, if the task you face demands creativity and novel ideas, it’s best to tackle it at your
+“worst” time of day! So if you are an early bird, make sure to attack your creative task in the evening,
+and vice versa for night owls. When your mind and body are less alert than at your “peak” hours,
+the muse of creativity awakens and is allowed to roam more freely. In other words, when your
+mental machinery is loose rather than standing at attention, the creativity flows.
+
+
+대부분의 사람들은 아침이든 저녁이든 혹은 오후든 간에 하루 중 그들이 자신의 최고의 상태에 있다고 느끼는 완벽한 시간을 갖는다. 우리 중 몇몇은 밤 올빼미이고, 몇몇은 일찍 일어나는 새이며, 그 사이에 있는 누군가는 오후의 시간 동안 가장 활력을 느낄지도 모른
+다. 여러분이 하루를 계획하고 업무를 분배한다면, 집중을 요구하는 과업을 하루 중 여러분의 최적의 시간에 처리하는 것에 중점을 두
+어라. 그러나, 만약 여러분이 직면한 과업이 창의성과 새로운 아이디어를 요구한다면, 하루 중 여러분의 “최악의” 시간에 그것을 다루는
+것이 최선이다! 그래서 만약 여러분이 일찍 일어나는 새라면 저녁에 창의적인 작업에 착수하고, 밤 올빼미라면 반대로 할 것을 명심해
+라. 여러분의 정신과 신체가 여러분의 “정점의” 시간보다 주의력이 덜할 때, 창의성의 영감이 깨어나 더 자유롭게 거니는 것이 허용된
+다. 다시 말해서, 여러분의 정신 기제가 주의력 있게 기립해 있을 때보다 느슨하게 풀려있을 때 창의성이 샘솟는다. 
+
+
+
+
+
+
 
