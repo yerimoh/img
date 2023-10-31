@@ -998,9 +998,316 @@ sound.
 
 
 
-21년	9월				38	39
-21년	11월				38	39
-22년	3월				38	39
-22년	6월				38	39
-22년	9월				38	39
+21년	9월				39
+
+
+Rewarding business success doesn’t always have to be done
+in a material way. ( ① ) A software company I once worked
+for had a great way of recognizing sales success. The sales director kept an air horn outside his office and
+would come out and blow the horn every time a
+salesperson settled a deal.) The
+noise, of course, interrupted anything and everything happening
+in the office because it was unbelievably loud. ( ③ ) However,
+it had an amazingly positive impact on everyone. ( ④ )
+Sometimes rewarding success can be as easy as that, especially
+when peer recognition is important. ( ⑤ ) You should have
+seen the way the rest of the sales team wanted the air horn
+blown for them.
+
+사업 성공을 보상하는 것은 항상 물질적인
+방식으로 되어야 하는 것은 아니다. 내가 예전에
+근무한 한 소프트웨어 회사는 판매 성공을 인정해
+주는 멋진 방법을 가지고 있었다. 판매부서 관리
+자는 그의 사무실 밖에 경적을 두었고 영업직원이
+거래를 성사할 때마다 나와서 경적을 불곤 했다. 물론, 그 소리는 믿을 수 없이 시끄러웠기 때문에
+사무실에서 일어나는 어떤 것이라도, 그리고 모든
+것을 방해했다. 그러나 그것은 모두에게 놀랄 만
+큼 긍정적인 영향을 주었다. 때때로, 성공을 보상
+하는 것은 그처럼 쉬울 수 있는데, 특히 동료의
+인정이 중요할 때 그렇다. 당신은 그 판매부서의
+나머지 사람들이 그들을 위해 경적이 불어지기를
+바라는 그 방식을 봤어야 했다.
+
+
+
+
+21년	9월				38
+
+
+
+Studies have consistently shown caffeine to be effective
+when used together with a pain reliever to treat headaches.
+( ① ) The positive correlation between caffeine intake and
+staying alert throughout the day has also been well
+established. ( ② ) As little as 60 mg (the amount typically in
+one cup of tea) can lead to a faster reaction time. However, using caffeine to improve alertness and mental
+performance doesn’t replace getting a good night’s sleep. One
+study from 2018 showed that coffee improved reaction times
+in those with or without poor sleep, but caffeine seemed to
+increase errors in the group with little sleep. ( ④ )
+Additionally, this study showed that even with caffeine, the
+group with little sleep did not score as well as those with
+adequate sleep. ( ⑤ ) It suggests that caffeine does not fully
+make up for inadequate sleep
+
+
+
+
+
+연구는 카페인이 두통을 치료하기 위해 진
+통제와 함께 사용할 때 효과적이라는 것을 일관적
+으로 보여주었다. 또한 카페인 섭취와 하루 종일
+각성된 상태로 있는 것 사이에는 양의 상관관계가
+잘 확립되어 있다. 60 mg (일반적으로 차 한 잔에
+들어 있는 양) 만큼의 적은 양으로도 반응 시간이
+빨라질 수 있다. 하지만, 각성과 정신적 수행능력
+을 향상시키기 위해 카페인을 사용하는 것은 숙면
+을 취하는 것을 대체하지 못한다. 2018년 한 연구
+는 커피는 수면이 부족한 사람이나 부족하지 않은
+사람에게나 반응 시간은 개선시켰지만, 카페인은
+수면이 부족한 집단 내에서는 오류를 증가시키는
+것 같다는 것을 보여주었다. 게다가, 이 연구는 카
+페인을 섭취하더라도, 수면이 부족한 그룹은 적절
+한 수면을 취한 집단만큼 점수를 잘 받지 못했다는
+것을 보여주었다. 그것은 카페인이 불충분한 수면
+을 충분히 보충하지 못한다는 것을 보여준다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+21년	11월				38	
+
+
+
+
+According to top nutrition experts, most nutrients are better
+absorbed and used by the body when consumed from a whole
+food instead of a supplement. ( ① ) However, many people feel
+the need to take pills, powders, and supplements in an attempt
+to obtain nutrients and fill the gaps in their diets. ( ② ) We
+hope these will give us more energy, prevent us from catching a
+cold in the winter, or improve our skin and hair. ( ③ ) But in
+reality, the large majority of supplements are artificial and
+may not even be completely absorbed by your body. Worse, some are contaminated with other substances and
+contain ingredients not listed on the label. For
+example, a recent investigative report found heavy metals in 40
+percent of 134 brands of protein powders on the market. ( ⑤ )
+With little control and regulation, taking supplements is a
+gamble and often costly.
+
+ 최고의 영양 전문가들에 의하면 많은 영양소
+가 보충제 대신에 자연식품으로부터 섭취되었을 때 신
+체에 의해 더 잘 흡수되고 사용된다 그러나 많은 사 .
+람들이 영양소를 얻고 자신의 식단에 있어 부족한 부
+분을 채우기 위한 시도로 알약 분말 그리고 보충제를 ,
+섭취할 필요성을 느낀다 우리는 이것들이 우리에게 .
+더 많은 에너지를 주고 우리가 겨울에 감기에 걸리는 ,
+것을 막아 주거나 혹은 우리의 피부와 모발을 개선해
+주기를 바란다 그러나 실제로는 대다수의 보충제가 .
+인위적이고 여러분의 신체에 의해 완전히 흡수조차 되
+지 않을 수도 있다. 심하게는 어떤 것들은 다른 물질
+로 오염되어 있으며 라벨에 실려 있지 않은 성분을 포
+함한다. 예를 들어 최근 한 조사 보고는 시장에 있는
+단백질 분말 개 브랜드 중 퍼센트에서 중금속을 134 40
+발견했다 단속과 규제가 거의 없다면 보충제를 섭취 .
+하는 것은 도박이며 종종 대가가 크다.
+
+
+
+21년	11월				39
+
+
+
+
+In general, kinetic energy is the energy associated with
+motion, while potential energy represents the energy which is
+“stored” in a physical system. Moreover, the total energy is
+always conserved. ( ① ) But while the total energy remains
+unchanged, the kinetic and potential parts of the total energy
+can change all the time. ( ② ) Imagine, for example, a pendulum
+which swings back and forth. ( ③ ) When it swings, it sweeps
+out an arc and then slows down as it comes closer to its highest
+point, where the pendulum does not move at all. ( ④ ) So at this
+point, the energy is completely given in terms of potential
+energy. But after this brief moment of rest, the pendulum swings
+back again and therefore part of the total energy is then
+given in the form of kinetic energy. So as the pendulum swings, kinetic and potential
+energy constantly change into each other. 
+
+
+일반적으로 운동 에너지는 운동과 관련 있는
+에너지이며 반면에 위치 에너지는 물리계에 저장되 産
+는 에너지를 나타낸다 게다가 총에너지는 항상 보존 疝 .
+된다 그러나 총에너지가 변하지 않는 채로 있는 반 .
+면 총에너지의 운동과 위치 에너지 비율은 항상 변할
+수 있다 예를 들어 앞뒤로 흔들리는 추를 상상해 보 .
+자 그것이 흔들릴 때 호 모양으로 쓸어내리듯 움직 .
+이다가 그러고 나서 그것이 그 최고점에 가까워지면
+서 속도가 줄어드는데 이 지점에서 추는 더 이상 움 ,
+직이지 않는다 그래서 이 지점에서 에너지는 완전히 .
+위치 에너지로 주어지게 된다. 하지만 이 짧은 순간
+의 멈춤 이후에 그 추는 다시 뒤로 흔들리게 되며 따
+라서 총에너지의 일부가 그때 운동 에너지의 형태로
+주어지게 된다. 그래서 그 추가 흔들리면서 운동과
+위치 에너지는 끊임없이 서로 바뀐다.
+
+
+
+
+22년	3월				38	
+
+When an ecosystem is biodiverse, wildlife have more opportunities to obtain food and shelter. Different
+species react and respond to changes in their environment differently. For example, imagine a forest
+with only one type of plant in it, which is the only source of food and habitat for the entire forest
+food web. Now, there is a sudden dry season and this plant dies. Plant­eating animals completely
+lose their food source and die out, and so do the animals that prey upon them. But, when there is
+biodiversity, the effects of a sudden change are not so dramatic. Different species of plants respond
+to the drought differently, and many can survive a dry season. Many animals have a variety of food
+sources and don’t just rely on one plant; now our forest ecosystem is no longer at the death!
+
+ 생태계에 생물 종이 다양할 때, 야생 생물들은 먹이와 서식지를 얻을 더 많은 기회를 얻는다. 다양한 종들은 그들의 환경 변화에 다르
+게 작용하고 반응한다. 예를 들어, 단 한 종류의 식물만 있는 숲을 상상해 보면, 그 식물은 숲의 먹이 그물 전체의 유일한 먹이원이자
+서식지이다. 이제, 갑작스러운 건기가 오고 이 식물이 죽는다. 초식 동물은 그들의 먹이원을 완전히 잃고 죽게 되고, 그들을 먹이로 삼
+는 동물들도 그렇게 된다. 하지만 종 다양성이 있을 때, 갑작스러운 변화의 영향은 그렇게 극적이지 않다. 다양한 종의 식물들이 가뭄에
+다르게 반응하고, 많은 식물이 건기에 살아남을 수 있다. 많은 동물은 다양한 먹이원을 가지고 있 으며 그저 한 식물에 의존하지는 않
+는다. 그래서 이제 우리의 숲 생태계는 더는 종말에 처해 있지 않다!
+
+
+
+
+22년	3월				39
+
+We are connected to the night sky in many ways. It has always inspired people to wonder and to
+imagine. Since the dawn of civilization, our ancestors created myths and told legendary stories about
+the night sky. Elements of those narratives became embedded in the social and cultural identities of
+many generations. On a practical level, the night sky helped past generations to keep track of time
+and create calendars — essential to developing societies as aids to farming and seasonal gathering.
+For many centuries, it also provided a useful navigation tool, vital for commerce and for exploring
+new worlds. Even in modern times, many people in remote areas of the planet observe the night
+sky for such practical purposes.
+
+ 우리는 많은 방식으로 밤하늘과 연결되어 있다. 그 것은 항상 사람들이 궁금해하고 상상하도록 영감을 주었다. 문명의 시작부터, 우리
+선조들은 밤하늘에 대해 신화를 만들었고 전설적 이야기를 했다. 그러한 이야기들의 요소들은 여러 세대의 사회적 그리고 문화적 정체
+성에 깊이 새겨졌다. 실용적인 수준에서, 밤하늘은 과거 세대들이 시간을 기록하고 달력을 만들도록 도왔고 이는 농업과 계절에 따른
+수확의 보조 도구로서 사회를 발전시키는 데 필수적이었다. 수세기 동안, 그것 은 또한 무역과 새로운 세계를 탐험하는 데 필수적인 유
+용한 항해 도구를 제공하였다. 심지어 현대에도, 지구의 외딴 지역에 있는 많은 사람이 그러한 실용적인 목적을 위해 밤하늘을 관찰한다.
+
+
+
+22년	6월				38	
+Friction is a force between two surfaces that are sliding, or trying to slide, across each other. For
+example, when you try to push a book along the floor, friction makes this difficult. Friction always
+works in the direction opposite to the direction in which the object is moving, or trying to move.
+So, friction always slows a moving object down. The amount of friction depends on the surface materials.
+The rougher the surface is, the more friction is produced. Friction also produces heat. For example,
+if you rub your hands together quickly, they will get warmer. Friction can be a useful force because
+it prevents our shoes slipping on the floor when we walk and stops car tires skidding on the road.
+When you walk, friction is caused between the tread on your shoes and the ground, acting to grip
+the ground and prevent sliding.
+
+
+마찰력은 서로 엇갈리게 미끄러지거나 미끄러지려고 하는 두 표면 사이에 작용하는 힘이다. 예를 들어, 당신이 바닥 위 책을 밀려고 할
+때, 마찰이 이를 어렵게 만든다. 마찰은 항상 물체가 움직이거나 움직이려고 하는 방향과 반대 방향으로 작용한다. 그래서 마찰은 항상
+움직이는 물체를 느리게 만든다. 마찰의 양은 표면 물질에 따라 달라진다. 표면이 거칠수록 더 많은 마찰력이 발생한다. 마찰은 또한 열
+을 발생시킨다. 예를 들어, 만약 당신이 손을 빠르게 비비면, 손이 더 따뜻해질 것이다. 마찰력은 우리가 걸을 때 신발이 바닥에서 미끄
+러지는 것을 방지하고 자동차 타이어가 도로에서 미끄러지는 것을 막아주므로 유용한 힘으로 작용할 수 있다. 걸을 때, 마찰은 당신의
+신발 접지 면과 바닥 사이에 발생하며, 이 마찰은 땅을 붙잡아 미끄러지는 것을 방지하는 역할을 한다.
+
+
+
+
+
+22년	6월				39
+
+Humans born without sight are not able to collect visual experiences, so they understand the world
+entirely through their other senses. As a result, people with blindness at birth develop an amazing
+ability to understand the world through the collection of experiences and memories that come from
+these non­visual senses. The dreams of a person who has been without sight since birth can be just
+as vivid and imaginative as those of someone with normal vision. They are unique, however, because
+their dreams are constructed from the non­visual experiences and memories they have collected. A person
+with normal vision will dream about a familiar friend using visual memories of shape, lighting, and colour.
+But, a blind person will associate the same friend with a unique combination of experiences from
+their non­visual senses that act to represent that friend. In other words, people blind at birth have
+similar overall dreaming experiences even though they do not dream in pictures.
+
+
+선천적으로 시각장애를 가진 사람은 시각적 경험을 수집할 수 없어서, 세상을 전적으로 다른 감각을 통해 이해한다. 그 결과, 선천적으
+로 시각장애를 가진 사람들은 이러한 비시각적 감각에서 오는 경험과 기억의 수집을 통해 세상을 이해하는 놀라운 능력을 개발한다.
+선천적으로 시각장애를 가진 사람이 꾸는 꿈은 정상 시력을 가진 사람의 꿈처럼 생생하고 상상력이 풍부할 수 있다. 그러나 그들의 꿈
+은 그들이 수집한 비시각적 경험과 기억으로부터 구성되기 때문에 그들은 특별하다. 정상적인 시력을 가진 사람들은 형태, 빛 그리고
+색의 시각적 기억을 사용하여 친숙한 친구에 대해 꿈을 꿀 것이다. 하지만, 시각장애인은 그 친구를 구현하는데 작용하는 비시각적 감
+각에서 나온 독특한 조합의 경험으로 그 친구를 연상할 것이다. 다시 말해, 선천적 시각 장애인들은 시각적인 꿈을 꾸지는 않지만, 전반
+적으로 비슷한 꿈을 경험한다.
+
+
+
+
+
+22년	9월				38	
+
+Television is the number one leisure activity in the United States and Europe, consuming more than
+half of our free time. We generally think of television as a way to relax, tune out, and escape fromour troubles for a bit each day. While this is true, there is increasing evidence that we are more
+motivated to tune in to our favorite shows and characters when we are feeling lonely or have
+a greater need for social connection. Television watching does satisfy these social needs to some
+extent, at least in the short run. Unfortunately, it is also likely to “crowd out” other activities that
+produce more sustainable social contributions to our social well­being. The more television we watch,
+the less likely we are to volunteer our time or to spend time with people in our social networks.
+In other words, the more time we make for Friends, the less time we have for friends in real life.
+
+텔레비전은 미국과 유럽에서 제1의 여가활동인데, 우리의 자유시간 중 절반 이상을 소비한다. 우리는 일반적으로 텔레비전을 휴식하고, 관심을 끄고, 매일 잠시나마 우리의 문제로부터 탈출하는 하나의 방법으로 생각한다. 이것이 사실이긴 하지만, 우리가 외롭다고 느끼고
+있거나 사회적 관계를 위한 더 큰 욕구를 가질 때 우리가 좋아하는 쇼들과 등장인물들을 보려는 동기가 더 부여된다는 증거가 늘어나
+고 있다. 적어도 단기적으로는, 텔레비전을 보는 것이 이러한 사회적인 욕구를 어느 정도까지는 정말로 만족시킨다. 불행히도, 그것은
+또한 우리의 사회적 행복을 위한 더 지속적인 사회적 기여를 만들어 내는 다른 활동들을 “몰아내기” 쉽다. 우리가 텔레비전을 더 볼수
+록, 우리는 사회적 관계망 속에서 우리의 시간을 기꺼이 할애하거나 사람들과 함께 시간을 덜 보내기 쉽다. 다시 말해서, 우리가
+Friends를 위해 더 많은 시간을 낼수록, 실제 친구들을 위해서는 시간을 덜 갖게 된다. 
+
+
+22년	9월				39
+
+
+We often associate the concept of temperature with how hot or cold an object feels when we
+touch it. In this way, our senses provide us with a qualitative indication of temperature. Our senses,
+however, are unreliable and often mislead us. For example, if you stand in bare feet with one foot
+on carpet and the other on a tile floor, the tile feels colder than the carpet even though both are
+at the same temperature. The two objects feel different because tile transfers energy by heat at
+a higher rate than carpet does. Your skin “measures” the rate of energy transfer by heat rather
+than the actual temperature. What we need is a reliable and reproducible method for measuring
+the relative hotness or coldness of objects rather than the rate of energy transfer. Scientists have
+developed a variety of thermometers for making such quantitative measurements.
+
+
+우리는 종종 온도 개념을 우리가 물건을 만졌을 때 그것이 얼마나 뜨겁게 또는 차갑게 느껴지는지와 연관 짓는다. 이런 식으로, 우리의
+감각은 우리에게 온도의 정성적인 지표를 제공한다. 그러나, 우리의 감각은 신뢰할 수 없으며 종종 우리를 잘못 인도한다. 예를 들어, 여러분이 맨발로 한쪽 발은 카페트 위에, 다른 한쪽 발은 타일 바닥 위에 놓고 서 있다면, 둘 다 같은 온도임에도 불구하고 카페트보다
+타일이 더 차갑게 느껴질 것이다. 타일이 카페트가 전달하는 것보다 더 높은 비율로 에너지를 열의 형태로 전달하기 때문에 그 두 물체
+는 다르게 느껴진다. 여러분의 피부는 실제 온도보다는 열에너지 전도율을 “측정한다”. 우리가 필요로 하는 것은 에너지 전도율보다는
+물체의 상대적인 뜨거움과 차가움을 측정하기 위한 신뢰할 수 있고 재현 가능한 수단이다. 과학자들은 그런 정량적인 측정을 하기 위
+해 다양한 온도계를 개발해 왔다. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
