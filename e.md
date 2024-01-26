@@ -1,56 +1,52 @@
-One of the most powerful features of contextualized models is their dynamic embeddings for words in context, leading to state-ofthe-art representations for context-aware lexical semantics. In this paper, we present a
-post-processing technique that enhances these
-representations by learning a transformation
-through static anchors. Our method requires
-only another pre-trained model and no labeled
-data is needed. We show consistent improvement in a range of benchmark tasks that test
-contextual variations of meaning both across
-different usages of a word and across different
-words as they are used in context. We demonstrate that while the original contextual representations can be improved by another embedding space from either contextualized or
-static models, the static embeddings, which
-have lower computational requirements, provide the most gains
+Our method3
+is built from a recently proposed
+cross-lingual alignment technique called meeting
+in the middle (Doval et al., 2018). Their method
+relies on manual translations to learn a transformation over an orthogonal alignment for better
+cross-lingual static embeddings. We show that
+by a similar alignment + transformation technique,
+we can improve monolingual contextualized embeddings without resorting to any labeled data.
+
+
+The direct correspondence among contextualized and static embeddings for alignment is not
+straightforward, as contextualized models can compute infinite representations for infinite contexts.
+Inspired by previous study (Schuster et al., 2019)
+that found contextualized embeddings roughly
+form word clusters, we take the average of each
+word’s contextual representations as anchors of a
+contextualized model. We call them static anchors
+as they provide one fixed representation per word,
+and therefore correspond to word embeddings from
+a static model such as FastText. We also use these
+anchors to align between contextualized models.
+To form the vocabulary for creating static anchors
+in our experiments, we take the top 200k most frequent words and extract their contexts from English
+Wikipedia.
+
+To describe the method in more detail, we represent the anchor embeddings from the original contextualized model as our source matrix S, and the
+corresponding representations from another contextualized/static model as target matrix T. si and
+ti are the source and target vectors for the ith word
+in the vocabulary (V ). We first find an orthogonal
+alignment matrix W that rotates the target space to
+the source space by solving the least squares linear
+regression problem in Eq. 1. W is found through
+Procrustes analysis (Schonemann ¨ , 1966).
+
+
+As described in Eq. 2, we then learn a linear
+mapping M to transform the source space towards
+the average of source and the rotated target space,
+by minimizing the squared Euclidean distance between each transformed source vector Msi and the
+mean vector µi
+(µi = (si + Wti)/2). M is the
+mapping we will use to transform the original contextualized space. Following Doval et al. (2018),
+M is found via a closed-form solution.
 
 
 
 
-1 Introduction
-Word representations are fundamental in Natural
-Language Processing (NLP) (Bengio et al., 2003).
-Recently, there has been a surge of contextualized
-models that achieve state-of-the-art in many NLP
-benchmark tasks (Peters et al., 2018; Devlin et al.,
-2019; Liu et al., 2019b; Yang et al., 2019). Even
-better performance has been reported from finetuning or training multiple contextualized models
-for a specific task such as question answering (Devlin et al., 2019; Xu et al., 2020). However, little
-has been explored on directly leveraging the many
-off-the-shelf pre-trained models to improve taskindependent representations for lexical semantics.
-Furthermore, classic static embeddings are often
-overlooked in this trend towards contextualized
-models. As opposed to contextualized embeddings
-that generate dynamic representations for words
-in context, static embeddings such as word2vec
-(Mikolov et al., 2013) assign one fixed representation for each word. Despite being less effective in
-capturing context-sensitive word meanings, static
-embeddings still achieve better performance than
-contextualized embeddings in traditional contextindependent lexical semantic tasks including word
-similarity and analogy (Wang et al., 2019). This
-suggests that static embeddings have the potential
-to offer complementary semantic information to enhance contextualized models for lexical semantics.
 
 
-
-We bridge the aforementioned gaps and propose
-a general framework that improves contextualized
-representations by leveraging other pre-trained contextualized/static models. We achieve this by using
-static anchors (the average contextual representations for each word) to transform the original contextualized model, guided by the embedding space
-from another model. We assess the overall quality
-of a model’s lexical semantic representation by two
-Inter Word tasks that measure relations between different words in context. We also evaluate on three
-Within Word tasks that test the contextual effect
-from different usages of the same word/word pair.
-Our method obtains consistent improvement across
-all these context-aware lexical semantic tasks. We
-demonstrate the particular strength of leveraging
-static embeddings, and offer insights on the reasons
-behind the improvement. Our method also has minimum computational complexity and requires no
-labeled data
+For improved alignment quality, as advised by
+Artetxe et al. (2016), we normalize and meancenter4
+the embeddings in S and T a priori.
